@@ -13,9 +13,9 @@ ENV/
 
 # --- Project Data (CRITICAL) ---
 # Ignore all files in the data directory...
-data/
+# data/
 # ...but keep the folder structure (via .gitkeep if you add one later)
-!data/.gitkeep
+# !data/.gitkeep
 
 # Safety net: Ignore heavy files if they accidentally land in root
 *.csv
