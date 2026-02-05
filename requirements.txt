@@ -1,4 +1,7 @@
-pandas
-openpyxl
 streamlit
+pandas
+numpy
 plotly
+openpyxl
+scipy
+matplotlib

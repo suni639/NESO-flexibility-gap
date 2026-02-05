@@ -1,3 +1,35 @@
+# --- Python & System Junk ---
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+Thumbs.db
+
+# --- Virtual Environments ---
+.venv/
+env/
+venv/
+ENV/
+
+# --- Project Data (CRITICAL) ---
+# Ignore all files in the data directory...
+data/
+# ...but keep the folder structure (via .gitkeep if you add one later)
+!data/.gitkeep
+
+# Safety net: Ignore heavy files if they accidentally land in root
+*.csv
+*.xlsx
+*.xls
+*.json
+
+# --- IDE Settings ---
+.vscode/
+.idea/
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
