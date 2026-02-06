@@ -80,8 +80,8 @@ df = load_and_run_simulation(battery_cap, battery_dur, wind_gw)
 dunkelflaute, worst_date = identify_dunkelflaute_window(df, window_days=7) # 7 Day view
 
 # --- 3. Dashboard Header ---
-st.title("⚡ NESO Project: The Flexibility Gap (2030)")
-st.markdown(f"**Scenario Analysis:** Can a {battery_cap}GW battery fleet survive a 1-in-10 year Dunkelflaute?")
+st.title("⚡ Clean Power 2030: The Green Energy Gap")
+st.markdown(f"**Scenario Analysis:** To quantify the "Clean Power Gap"—the volume of firm, dispatchable capacity (GW) and energy (TWh) required to secure the UK grid during a severe weather stress event (Dunkelflaute), assuming the full delivery of the Clean Power 2030 renewable targets.")
 
 # --- 4. KPI Metrics Row ---
 col1, col2, col3, col4 = st.columns(4)
