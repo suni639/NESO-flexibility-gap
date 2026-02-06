@@ -12,7 +12,7 @@
 **The Findings:**
 * **The "Gap" Defined:** During a severe winter calm (modelled on 2025 weather patterns scaled to 2030), the grid faces a capacity shortfall of **~51 GW**, even after dispatching a targeted 25 GW battery fleet.
 * **The Failure Mode:** Short-duration (Li-ion) batteries exhausted their energy reserves within the **first 24 hours** of the 120-hour stress window.
-* **Strategic Implication:** The project proves that "Flexibility" is not a single bucket. While batteries solve *intraday* volatility (seconds to hours), they provide **zero security** for *inter-day* weather risks. The 51 GW gap effectively dimensions the requirement for **Long Duration Energy Storage (LDES)** and Low-Carbon Gas (CCS/Hydrogen).
+* **Strategic Implication:** The project proves that "Flexibility" is not a single bucket. While batteries solve *intraday* volatility (seconds to hours), they provide **zero security** for *inter-day* weather risks. The 51 GW gap effectively defines the requirement for **Long Duration Energy Storage (LDES)** and Low-Carbon Gas (CCS/Hydrogen).
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## 3. The Threat: "Dunkelflaute" Events
 
-**Definition:** From the German for "Dark Wind Lull," a Dunkelflaute is a period characterized by **low wind speeds (<10% capacity)**, **low solar irradiance**, and **cold temperatures** (driving high heating demand).
+**Definition:** From the German for "Dark Wind Lull," a Dunkelflaute is a period characterised by **low wind speeds (<10% capacity)**, **low solar irradiance**, and **cold temperatures** (driving high heating demand).
 
 **Probability:** These are recurring climate features, not anomalies. While minor lulls happen often, historical data confirms that severe events lasting **3–10 days** occur roughly every **2–5 years**.
 
@@ -49,10 +49,10 @@ If batteries fail the 5-day test (as shown by the model), the project highlights
 
 ## 5. Data & Methodology
 
-We utilised a **"Digital Twin"** approach to stress-test the 2030 grid:
+A **"Digital Twin"** approach was utilised to stress-test the 2030 grid:
 * **Weather Profile:** Used **2025 Historic Demand & Settlement Data (Elexon)** to capture the exact physics of a "Cold Dunkelflaute" (load factors <3%).
 * **Future Scaling:** Applied **NESO FES 2030** and **CP30 Action Plan** targets to scale the wind/solar amplitude (e.g., scaling wind output to hit 50 GW capacity).
-* **Simulation Engine:** A custom Python dispatch engine calculated the net deficit half-hour by half-hour, prioritizing `Renewables` > `Batteries` > `Fossil Backup`.
+* **Simulation Engine:** A custom Python dispatch engine calculated the net deficit half-hour by half-hour, prioritising `Renewables` > `Batteries` > `Fossil Backup`.
 
 ---
 
@@ -87,6 +87,7 @@ Type the following commands (press Enter after each line):
 ```bash
 cd Desktop/NESO-flexibility-gap  # (Or whatever you named the folder)
 pip install -r requirements.txt
+```
 *This installs the necessary tools (pandas, streamlit, plotly).*
 
 ### Step 2: Launch the Dashboard
@@ -94,7 +95,7 @@ In the same terminal window, type:
 
 ```bash
 streamlit run app.py
-
+```
 A web browser window will open automatically. You can now use the sliders on the left to adjust the 2030 grid strategy and see if you can keep the lights on!
 
 ---
