@@ -17,11 +17,11 @@ ENV/
 # ...but keep the folder structure (via .gitkeep if you add one later)
 # !data/.gitkeep
 
-# Safety net: Ignore heavy files if they accidentally land in root
-*.csv
-*.xlsx
-*.xls
-*.json
+# # Safety net: Ignore heavy files if they accidentally land in root
+# *.csv
+# *.xlsx
+# *.xls
+# *.json
 
 # --- IDE Settings ---
 .vscode/

@@ -1,0 +1,1463 @@
+Simulation Name,Spotlight year,Historical weather year,Weather-conditional LOLE (h/year),Weather-conditional EEU (MWh/year)
+Portfolio 1,2030/31,1984/85,3.97,34200
+Portfolio 1,2030/31,1985/86,4.98,38020
+Portfolio 1,2030/31,1986/87,0,0
+Portfolio 1,2030/31,1987/88,0,0
+Portfolio 1,2030/31,1988/89,0,0
+Portfolio 1,2030/31,1989/90,0,0
+Portfolio 1,2030/31,1990/91,0,0
+Portfolio 1,2030/31,1991/92,0,0
+Portfolio 1,2030/31,1992/93,0,0
+Portfolio 1,2030/31,1993/94,0,0
+Portfolio 1,2030/31,1994/95,0,0
+Portfolio 1,2030/31,1995/96,0,0
+Portfolio 1,2030/31,1996/97,0.01,50
+Portfolio 1,2030/31,1997/98,0,0
+Portfolio 1,2030/31,1998/99,0,0
+Portfolio 1,2030/31,1999/2000,0,0
+Portfolio 1,2030/31,2000/01,0,0
+Portfolio 1,2030/31,2001/02,0,0
+Portfolio 1,2030/31,2002/03,0,0
+Portfolio 1,2030/31,2003/04,0,0
+Portfolio 1,2030/31,2004/05,0,0
+Portfolio 1,2030/31,2005/06,0,0
+Portfolio 1,2030/31,2006/07,0,0
+Portfolio 1,2030/31,2007/08,0,0
+Portfolio 1,2030/31,2008/09,0,0
+Portfolio 1,2030/31,2009/10,0,0
+Portfolio 1,2030/31,2010/11,0,0
+Portfolio 1,2030/31,2011/12,0.04,150
+Portfolio 1,2030/31,2012/13,0,0
+Portfolio 1,2030/31,2013/14,0,0
+Portfolio 1,2030/31,2014/15,0,0
+Portfolio 1,2030/31,2015/16,0,0
+Portfolio 1,2030/31,2016/17,0,0
+Portfolio 1,2030/31,2017/18,0,0
+Portfolio 1,2035/36,1984/85,1.52,9450
+Portfolio 1,2035/36,1985/86,6.23,47100
+Portfolio 1,2035/36,1986/87,0,0
+Portfolio 1,2035/36,1987/88,0,0
+Portfolio 1,2035/36,1988/89,0,0
+Portfolio 1,2035/36,1989/90,0,0
+Portfolio 1,2035/36,1990/91,0,0
+Portfolio 1,2035/36,1991/92,0,0
+Portfolio 1,2035/36,1992/93,0,0
+Portfolio 1,2035/36,1993/94,0,0
+Portfolio 1,2035/36,1994/95,0,0
+Portfolio 1,2035/36,1995/96,0,0
+Portfolio 1,2035/36,1996/97,0,0
+Portfolio 1,2035/36,1997/98,0,0
+Portfolio 1,2035/36,1998/99,0,0
+Portfolio 1,2035/36,1999/2000,0,0
+Portfolio 1,2035/36,2000/01,0.1,440
+Portfolio 1,2035/36,2001/02,0,0
+Portfolio 1,2035/36,2002/03,0,0
+Portfolio 1,2035/36,2003/04,0,0
+Portfolio 1,2035/36,2004/05,0,0
+Portfolio 1,2035/36,2005/06,0,0
+Portfolio 1,2035/36,2006/07,0,0
+Portfolio 1,2035/36,2007/08,0,0
+Portfolio 1,2035/36,2008/09,0,0
+Portfolio 1,2035/36,2009/10,0,0
+Portfolio 1,2035/36,2010/11,0,0
+Portfolio 1,2035/36,2011/12,0,0
+Portfolio 1,2035/36,2012/13,0,0
+Portfolio 1,2035/36,2013/14,0,0
+Portfolio 1,2035/36,2014/15,0,0
+Portfolio 1,2035/36,2015/16,0,0
+Portfolio 1,2035/36,2016/17,0,0
+Portfolio 1,2035/36,2017/18,0,0
+Portfolio 1,2040/41,1984/85,0.36,2440
+Portfolio 1,2040/41,1985/86,5.63,57040
+Portfolio 1,2040/41,1986/87,0,0
+Portfolio 1,2040/41,1987/88,0,0
+Portfolio 1,2040/41,1988/89,0,0
+Portfolio 1,2040/41,1989/90,0,0
+Portfolio 1,2040/41,1990/91,0,0
+Portfolio 1,2040/41,1991/92,0,0
+Portfolio 1,2040/41,1992/93,0,0
+Portfolio 1,2040/41,1993/94,0,0
+Portfolio 1,2040/41,1994/95,0,0
+Portfolio 1,2040/41,1995/96,0,0
+Portfolio 1,2040/41,1996/97,0,0
+Portfolio 1,2040/41,1997/98,0,0
+Portfolio 1,2040/41,1998/99,0,0
+Portfolio 1,2040/41,1999/2000,0,0
+Portfolio 1,2040/41,2000/01,0.06,450
+Portfolio 1,2040/41,2001/02,0,0
+Portfolio 1,2040/41,2002/03,0,0
+Portfolio 1,2040/41,2003/04,0,0
+Portfolio 1,2040/41,2004/05,0,0
+Portfolio 1,2040/41,2005/06,0.07,800
+Portfolio 1,2040/41,2006/07,0,0
+Portfolio 1,2040/41,2007/08,0,0
+Portfolio 1,2040/41,2008/09,0,0
+Portfolio 1,2040/41,2009/10,0,0
+Portfolio 1,2040/41,2010/11,0,0
+Portfolio 1,2040/41,2011/12,0,0
+Portfolio 1,2040/41,2012/13,0,0
+Portfolio 1,2040/41,2013/14,0,0
+Portfolio 1,2040/41,2014/15,0,0
+Portfolio 1,2040/41,2015/16,0,0
+Portfolio 1,2040/41,2016/17,0,0
+Portfolio 1,2040/41,2017/18,0,0
+Portfolio 2,2030/31,1984/85,4.09,35350
+Portfolio 2,2030/31,1985/86,4.82,36880
+Portfolio 2,2030/31,1986/87,0,0
+Portfolio 2,2030/31,1987/88,0,0
+Portfolio 2,2030/31,1988/89,0,0
+Portfolio 2,2030/31,1989/90,0,0
+Portfolio 2,2030/31,1990/91,0,0
+Portfolio 2,2030/31,1991/92,0,0
+Portfolio 2,2030/31,1992/93,0,0
+Portfolio 2,2030/31,1993/94,0,0
+Portfolio 2,2030/31,1994/95,0,0
+Portfolio 2,2030/31,1995/96,0,0
+Portfolio 2,2030/31,1996/97,0.02,90
+Portfolio 2,2030/31,1997/98,0,0
+Portfolio 2,2030/31,1998/99,0,0
+Portfolio 2,2030/31,1999/2000,0,0
+Portfolio 2,2030/31,2000/01,0,0
+Portfolio 2,2030/31,2001/02,0,0
+Portfolio 2,2030/31,2002/03,0,0
+Portfolio 2,2030/31,2003/04,0,0
+Portfolio 2,2030/31,2004/05,0,0
+Portfolio 2,2030/31,2005/06,0,0
+Portfolio 2,2030/31,2006/07,0,0
+Portfolio 2,2030/31,2007/08,0,0
+Portfolio 2,2030/31,2008/09,0,0
+Portfolio 2,2030/31,2009/10,0,0
+Portfolio 2,2030/31,2010/11,0,0
+Portfolio 2,2030/31,2011/12,0.05,170
+Portfolio 2,2030/31,2012/13,0,0
+Portfolio 2,2030/31,2013/14,0,0
+Portfolio 2,2030/31,2014/15,0,0
+Portfolio 2,2030/31,2015/16,0,0
+Portfolio 2,2030/31,2016/17,0,0
+Portfolio 2,2030/31,2017/18,0,0
+Portfolio 2,2035/36,1984/85,0.81,5450
+Portfolio 2,2035/36,1985/86,5.41,49030
+Portfolio 2,2035/36,1986/87,0,0
+Portfolio 2,2035/36,1987/88,0,0
+Portfolio 2,2035/36,1988/89,0,0
+Portfolio 2,2035/36,1989/90,0,0
+Portfolio 2,2035/36,1990/91,0,0
+Portfolio 2,2035/36,1991/92,0,0
+Portfolio 2,2035/36,1992/93,0,0
+Portfolio 2,2035/36,1993/94,0,0
+Portfolio 2,2035/36,1994/95,0,0
+Portfolio 2,2035/36,1995/96,0,0
+Portfolio 2,2035/36,1996/97,0,0
+Portfolio 2,2035/36,1997/98,0,0
+Portfolio 2,2035/36,1998/99,0,0
+Portfolio 2,2035/36,1999/2000,0,0
+Portfolio 2,2035/36,2000/01,0.4,3450
+Portfolio 2,2035/36,2001/02,0,0
+Portfolio 2,2035/36,2002/03,0,0
+Portfolio 2,2035/36,2003/04,0,0
+Portfolio 2,2035/36,2004/05,0,0
+Portfolio 2,2035/36,2005/06,0.93,10340
+Portfolio 2,2035/36,2006/07,0,0
+Portfolio 2,2035/36,2007/08,0,0
+Portfolio 2,2035/36,2008/09,0,0
+Portfolio 2,2035/36,2009/10,0,0
+Portfolio 2,2035/36,2010/11,0,0
+Portfolio 2,2035/36,2011/12,0,0
+Portfolio 2,2035/36,2012/13,0,0
+Portfolio 2,2035/36,2013/14,0,0
+Portfolio 2,2035/36,2014/15,0,0
+Portfolio 2,2035/36,2015/16,0,0
+Portfolio 2,2035/36,2016/17,0,0
+Portfolio 2,2035/36,2017/18,0,0
+Portfolio 2,2040/41,1984/85,0.44,3890
+Portfolio 2,2040/41,1985/86,6.19,72620
+Portfolio 2,2040/41,1986/87,0,0
+Portfolio 2,2040/41,1987/88,0,0
+Portfolio 2,2040/41,1988/89,0,0
+Portfolio 2,2040/41,1989/90,0,0
+Portfolio 2,2040/41,1990/91,0,0
+Portfolio 2,2040/41,1991/92,0,0
+Portfolio 2,2040/41,1992/93,0,0
+Portfolio 2,2040/41,1993/94,0,0
+Portfolio 2,2040/41,1994/95,0,0
+Portfolio 2,2040/41,1995/96,0,0
+Portfolio 2,2040/41,1996/97,0,0
+Portfolio 2,2040/41,1997/98,0,0
+Portfolio 2,2040/41,1998/99,0,0
+Portfolio 2,2040/41,1999/2000,0,0
+Portfolio 2,2040/41,2000/01,0.19,1740
+Portfolio 2,2040/41,2001/02,0,0
+Portfolio 2,2040/41,2002/03,0,0
+Portfolio 2,2040/41,2003/04,0,0
+Portfolio 2,2040/41,2004/05,0,0
+Portfolio 2,2040/41,2005/06,1.36,17300
+Portfolio 2,2040/41,2006/07,0,0
+Portfolio 2,2040/41,2007/08,0,0
+Portfolio 2,2040/41,2008/09,0,0
+Portfolio 2,2040/41,2009/10,0,0
+Portfolio 2,2040/41,2010/11,0,0
+Portfolio 2,2040/41,2011/12,0,0
+Portfolio 2,2040/41,2012/13,0,0
+Portfolio 2,2040/41,2013/14,0,0
+Portfolio 2,2040/41,2014/15,0,0
+Portfolio 2,2040/41,2015/16,0,0
+Portfolio 2,2040/41,2016/17,0,0
+Portfolio 2,2040/41,2017/18,0,0
+Portfolio 3,2030/31,1984/85,4.09,35350
+Portfolio 3,2030/31,1985/86,4.82,36880
+Portfolio 3,2030/31,1986/87,0,0
+Portfolio 3,2030/31,1987/88,0,0
+Portfolio 3,2030/31,1988/89,0,0
+Portfolio 3,2030/31,1989/90,0,0
+Portfolio 3,2030/31,1990/91,0,0
+Portfolio 3,2030/31,1991/92,0,0
+Portfolio 3,2030/31,1992/93,0,0
+Portfolio 3,2030/31,1993/94,0,0
+Portfolio 3,2030/31,1994/95,0,0
+Portfolio 3,2030/31,1995/96,0,0
+Portfolio 3,2030/31,1996/97,0.02,90
+Portfolio 3,2030/31,1997/98,0,0
+Portfolio 3,2030/31,1998/99,0,0
+Portfolio 3,2030/31,1999/2000,0,0
+Portfolio 3,2030/31,2000/01,0,0
+Portfolio 3,2030/31,2001/02,0,0
+Portfolio 3,2030/31,2002/03,0,0
+Portfolio 3,2030/31,2003/04,0,0
+Portfolio 3,2030/31,2004/05,0,0
+Portfolio 3,2030/31,2005/06,0,0
+Portfolio 3,2030/31,2006/07,0,0
+Portfolio 3,2030/31,2007/08,0,0
+Portfolio 3,2030/31,2008/09,0,0
+Portfolio 3,2030/31,2009/10,0,0
+Portfolio 3,2030/31,2010/11,0,0
+Portfolio 3,2030/31,2011/12,0.05,170
+Portfolio 3,2030/31,2012/13,0,0
+Portfolio 3,2030/31,2013/14,0,0
+Portfolio 3,2030/31,2014/15,0,0
+Portfolio 3,2030/31,2015/16,0,0
+Portfolio 3,2030/31,2016/17,0,0
+Portfolio 3,2030/31,2017/18,0,0
+Portfolio 3,2035/36,1984/85,0.14,670
+Portfolio 3,2035/36,1985/86,5.59,40460
+Portfolio 3,2035/36,1986/87,0,0
+Portfolio 3,2035/36,1987/88,0,0
+Portfolio 3,2035/36,1988/89,0,0
+Portfolio 3,2035/36,1989/90,0,0
+Portfolio 3,2035/36,1990/91,0,0
+Portfolio 3,2035/36,1991/92,0,0
+Portfolio 3,2035/36,1992/93,0,0
+Portfolio 3,2035/36,1993/94,0,0
+Portfolio 3,2035/36,1994/95,0,0
+Portfolio 3,2035/36,1995/96,0,0
+Portfolio 3,2035/36,1996/97,0,0
+Portfolio 3,2035/36,1997/98,0,0
+Portfolio 3,2035/36,1998/99,0,0
+Portfolio 3,2035/36,1999/2000,0,0
+Portfolio 3,2035/36,2000/01,0.13,630
+Portfolio 3,2035/36,2001/02,0,0
+Portfolio 3,2035/36,2002/03,0,0
+Portfolio 3,2035/36,2003/04,0,0
+Portfolio 3,2035/36,2004/05,0,0
+Portfolio 3,2035/36,2005/06,0,0
+Portfolio 3,2035/36,2006/07,0,0
+Portfolio 3,2035/36,2007/08,0,0
+Portfolio 3,2035/36,2008/09,0,0
+Portfolio 3,2035/36,2009/10,0,0
+Portfolio 3,2035/36,2010/11,0,0
+Portfolio 3,2035/36,2011/12,0,0
+Portfolio 3,2035/36,2012/13,0,0
+Portfolio 3,2035/36,2013/14,0,0
+Portfolio 3,2035/36,2014/15,0,0
+Portfolio 3,2035/36,2015/16,0,0
+Portfolio 3,2035/36,2016/17,0,0
+Portfolio 3,2035/36,2017/18,0,0
+Portfolio 3,2040/41,1984/85,0.43,2800
+Portfolio 3,2040/41,1985/86,6.25,57510
+Portfolio 3,2040/41,1986/87,0,0
+Portfolio 3,2040/41,1987/88,0,0
+Portfolio 3,2040/41,1988/89,0,0
+Portfolio 3,2040/41,1989/90,0,0
+Portfolio 3,2040/41,1990/91,0,0
+Portfolio 3,2040/41,1991/92,0,0
+Portfolio 3,2040/41,1992/93,0,0
+Portfolio 3,2040/41,1993/94,0,0
+Portfolio 3,2040/41,1994/95,0,0
+Portfolio 3,2040/41,1995/96,0,0
+Portfolio 3,2040/41,1996/97,0.93,13270
+Portfolio 3,2040/41,1997/98,0,0
+Portfolio 3,2040/41,1998/99,0,0
+Portfolio 3,2040/41,1999/2000,0,0
+Portfolio 3,2040/41,2000/01,0.04,420
+Portfolio 3,2040/41,2001/02,0,0
+Portfolio 3,2040/41,2002/03,0,0
+Portfolio 3,2040/41,2003/04,0,0
+Portfolio 3,2040/41,2004/05,0,0
+Portfolio 3,2040/41,2005/06,0.18,1650
+Portfolio 3,2040/41,2006/07,0,0
+Portfolio 3,2040/41,2007/08,0,0
+Portfolio 3,2040/41,2008/09,0,0
+Portfolio 3,2040/41,2009/10,0,0
+Portfolio 3,2040/41,2010/11,0,0
+Portfolio 3,2040/41,2011/12,0,0
+Portfolio 3,2040/41,2012/13,0,0
+Portfolio 3,2040/41,2013/14,0,0
+Portfolio 3,2040/41,2014/15,0,0
+Portfolio 3,2040/41,2015/16,0,0
+Portfolio 3,2040/41,2016/17,0,0
+Portfolio 3,2040/41,2017/18,0,0
+Portfolio 4,2035/36,1984/85,0,0
+Portfolio 4,2035/36,1985/86,4.8,37570
+Portfolio 4,2035/36,1986/87,0,0
+Portfolio 4,2035/36,1987/88,0,0
+Portfolio 4,2035/36,1988/89,0,0
+Portfolio 4,2035/36,1989/90,0,0
+Portfolio 4,2035/36,1990/91,0,0
+Portfolio 4,2035/36,1991/92,0,0
+Portfolio 4,2035/36,1992/93,0,0
+Portfolio 4,2035/36,1993/94,0,0
+Portfolio 4,2035/36,1994/95,0,0
+Portfolio 4,2035/36,1995/96,0,0
+Portfolio 4,2035/36,1996/97,0,0
+Portfolio 4,2035/36,1997/98,0,0
+Portfolio 4,2035/36,1998/99,0,0
+Portfolio 4,2035/36,1999/2000,0,0
+Portfolio 4,2035/36,2000/01,0.01,20
+Portfolio 4,2035/36,2001/02,0,0
+Portfolio 4,2035/36,2002/03,0,0
+Portfolio 4,2035/36,2003/04,0,0
+Portfolio 4,2035/36,2004/05,0,0
+Portfolio 4,2035/36,2005/06,0,0
+Portfolio 4,2035/36,2006/07,0,0
+Portfolio 4,2035/36,2007/08,0,0
+Portfolio 4,2035/36,2008/09,0,0
+Portfolio 4,2035/36,2009/10,0,0
+Portfolio 4,2035/36,2010/11,0,0
+Portfolio 4,2035/36,2011/12,0,0
+Portfolio 4,2035/36,2012/13,0,0
+Portfolio 4,2035/36,2013/14,0,0
+Portfolio 4,2035/36,2014/15,0,0
+Portfolio 4,2035/36,2015/16,0,0
+Portfolio 4,2035/36,2016/17,0,0
+Portfolio 4,2035/36,2017/18,0,0
+Portfolio 4,2040/41,1984/85,0,0
+Portfolio 4,2040/41,1985/86,7.38,86810
+Portfolio 4,2040/41,1986/87,0,0
+Portfolio 4,2040/41,1987/88,0,0
+Portfolio 4,2040/41,1988/89,0,0
+Portfolio 4,2040/41,1989/90,0,0
+Portfolio 4,2040/41,1990/91,0,0
+Portfolio 4,2040/41,1991/92,0,0
+Portfolio 4,2040/41,1992/93,0,0
+Portfolio 4,2040/41,1993/94,0,0
+Portfolio 4,2040/41,1994/95,0,0
+Portfolio 4,2040/41,1995/96,0,0
+Portfolio 4,2040/41,1996/97,0,0
+Portfolio 4,2040/41,1997/98,0,0
+Portfolio 4,2040/41,1998/99,0,0
+Portfolio 4,2040/41,1999/2000,0,0
+Portfolio 4,2040/41,2000/01,0.03,280
+Portfolio 4,2040/41,2001/02,0,0
+Portfolio 4,2040/41,2002/03,0,0
+Portfolio 4,2040/41,2003/04,0,0
+Portfolio 4,2040/41,2004/05,0,0
+Portfolio 4,2040/41,2005/06,0,0
+Portfolio 4,2040/41,2006/07,0,0
+Portfolio 4,2040/41,2007/08,0,0
+Portfolio 4,2040/41,2008/09,0,0
+Portfolio 4,2040/41,2009/10,0,0
+Portfolio 4,2040/41,2010/11,0,0
+Portfolio 4,2040/41,2011/12,0,0
+Portfolio 4,2040/41,2012/13,0,0
+Portfolio 4,2040/41,2013/14,0,0
+Portfolio 4,2040/41,2014/15,0,0
+Portfolio 4,2040/41,2015/16,0,0
+Portfolio 4,2040/41,2016/17,0,0
+Portfolio 4,2040/41,2017/18,0,0
+Portfolio 5,2035/36,1984/85,0,0
+Portfolio 5,2035/36,1985/86,6.47,56740
+Portfolio 5,2035/36,1986/87,0,0
+Portfolio 5,2035/36,1987/88,0,0
+Portfolio 5,2035/36,1988/89,0,0
+Portfolio 5,2035/36,1989/90,0,0
+Portfolio 5,2035/36,1990/91,0,0
+Portfolio 5,2035/36,1991/92,0,0
+Portfolio 5,2035/36,1992/93,0,0
+Portfolio 5,2035/36,1993/94,0,0
+Portfolio 5,2035/36,1994/95,0,0
+Portfolio 5,2035/36,1995/96,0,0
+Portfolio 5,2035/36,1996/97,0,0
+Portfolio 5,2035/36,1997/98,0,0
+Portfolio 5,2035/36,1998/99,0,0
+Portfolio 5,2035/36,1999/2000,0,0
+Portfolio 5,2035/36,2000/01,0.08,920
+Portfolio 5,2035/36,2001/02,0,0
+Portfolio 5,2035/36,2002/03,0,0
+Portfolio 5,2035/36,2003/04,0,0
+Portfolio 5,2035/36,2004/05,0,0
+Portfolio 5,2035/36,2005/06,0,0
+Portfolio 5,2035/36,2006/07,0,0
+Portfolio 5,2035/36,2007/08,0,0
+Portfolio 5,2035/36,2008/09,0,0
+Portfolio 5,2035/36,2009/10,0,0
+Portfolio 5,2035/36,2010/11,0,0
+Portfolio 5,2035/36,2011/12,0,0
+Portfolio 5,2035/36,2012/13,0,0
+Portfolio 5,2035/36,2013/14,0,0
+Portfolio 5,2035/36,2014/15,0,0
+Portfolio 5,2035/36,2015/16,0,0
+Portfolio 5,2035/36,2016/17,0,0
+Portfolio 5,2035/36,2017/18,0,0
+Portfolio 5,2040/41,1984/85,0,0
+Portfolio 5,2040/41,1985/86,6.08,79800
+Portfolio 5,2040/41,1986/87,0,0
+Portfolio 5,2040/41,1987/88,0,0
+Portfolio 5,2040/41,1988/89,0,0
+Portfolio 5,2040/41,1989/90,0,0
+Portfolio 5,2040/41,1990/91,0,0
+Portfolio 5,2040/41,1991/92,0,0
+Portfolio 5,2040/41,1992/93,0,0
+Portfolio 5,2040/41,1993/94,0,0
+Portfolio 5,2040/41,1994/95,0,0
+Portfolio 5,2040/41,1995/96,0,0
+Portfolio 5,2040/41,1996/97,0,0
+Portfolio 5,2040/41,1997/98,0,0
+Portfolio 5,2040/41,1998/99,0,0
+Portfolio 5,2040/41,1999/2000,0,0
+Portfolio 5,2040/41,2000/01,0,0
+Portfolio 5,2040/41,2001/02,0,0
+Portfolio 5,2040/41,2002/03,0,0
+Portfolio 5,2040/41,2003/04,0,0
+Portfolio 5,2040/41,2004/05,0,0
+Portfolio 5,2040/41,2005/06,0,0
+Portfolio 5,2040/41,2006/07,0,0
+Portfolio 5,2040/41,2007/08,0,0
+Portfolio 5,2040/41,2008/09,0,0
+Portfolio 5,2040/41,2009/10,0,0
+Portfolio 5,2040/41,2010/11,0,0
+Portfolio 5,2040/41,2011/12,0,0
+Portfolio 5,2040/41,2012/13,0,0
+Portfolio 5,2040/41,2013/14,0,0
+Portfolio 5,2040/41,2014/15,0,0
+Portfolio 5,2040/41,2015/16,0,0
+Portfolio 5,2040/41,2016/17,0,0
+Portfolio 5,2040/41,2017/18,0,0
+Portfolio 6,2035/36,1984/85,0.24,1000
+Portfolio 6,2035/36,1985/86,6.34,47960
+Portfolio 6,2035/36,1986/87,0,0
+Portfolio 6,2035/36,1987/88,0,0
+Portfolio 6,2035/36,1988/89,0,0
+Portfolio 6,2035/36,1989/90,0,0
+Portfolio 6,2035/36,1990/91,0,0
+Portfolio 6,2035/36,1991/92,0,0
+Portfolio 6,2035/36,1992/93,0,0
+Portfolio 6,2035/36,1993/94,0,0
+Portfolio 6,2035/36,1994/95,0,0
+Portfolio 6,2035/36,1995/96,0,0
+Portfolio 6,2035/36,1996/97,0,0
+Portfolio 6,2035/36,1997/98,0,0
+Portfolio 6,2035/36,1998/99,0,0
+Portfolio 6,2035/36,1999/2000,0,0
+Portfolio 6,2035/36,2000/01,0.23,1670
+Portfolio 6,2035/36,2001/02,0,0
+Portfolio 6,2035/36,2002/03,0,0
+Portfolio 6,2035/36,2003/04,0,0
+Portfolio 6,2035/36,2004/05,0,0
+Portfolio 6,2035/36,2005/06,0.06,570
+Portfolio 6,2035/36,2006/07,0,0
+Portfolio 6,2035/36,2007/08,0,0
+Portfolio 6,2035/36,2008/09,0,0
+Portfolio 6,2035/36,2009/10,0,0
+Portfolio 6,2035/36,2010/11,0,0
+Portfolio 6,2035/36,2011/12,0,0
+Portfolio 6,2035/36,2012/13,0,0
+Portfolio 6,2035/36,2013/14,0,0
+Portfolio 6,2035/36,2014/15,0,0
+Portfolio 6,2035/36,2015/16,0,0
+Portfolio 6,2035/36,2016/17,0,0
+Portfolio 6,2035/36,2017/18,0,0
+Portfolio 6,2040/41,1984/85,0,0
+Portfolio 6,2040/41,1985/86,6.78,75870
+Portfolio 6,2040/41,1986/87,0,0
+Portfolio 6,2040/41,1987/88,0,0
+Portfolio 6,2040/41,1988/89,0,0
+Portfolio 6,2040/41,1989/90,0,0
+Portfolio 6,2040/41,1990/91,0,0
+Portfolio 6,2040/41,1991/92,0,0
+Portfolio 6,2040/41,1992/93,0,0
+Portfolio 6,2040/41,1993/94,0,0
+Portfolio 6,2040/41,1994/95,0,0
+Portfolio 6,2040/41,1995/96,0,0
+Portfolio 6,2040/41,1996/97,0,0
+Portfolio 6,2040/41,1997/98,0,0
+Portfolio 6,2040/41,1998/99,0,0
+Portfolio 6,2040/41,1999/2000,0,0
+Portfolio 6,2040/41,2000/01,0,0
+Portfolio 6,2040/41,2001/02,0,0
+Portfolio 6,2040/41,2002/03,0,0
+Portfolio 6,2040/41,2003/04,0,0
+Portfolio 6,2040/41,2004/05,0,0
+Portfolio 6,2040/41,2005/06,0,0
+Portfolio 6,2040/41,2006/07,0,0
+Portfolio 6,2040/41,2007/08,0,0
+Portfolio 6,2040/41,2008/09,0,0
+Portfolio 6,2040/41,2009/10,0,0
+Portfolio 6,2040/41,2010/11,0,0
+Portfolio 6,2040/41,2011/12,0,0
+Portfolio 6,2040/41,2012/13,0,0
+Portfolio 6,2040/41,2013/14,0,0
+Portfolio 6,2040/41,2014/15,0,0
+Portfolio 6,2040/41,2015/16,0,0
+Portfolio 6,2040/41,2016/17,0,0
+Portfolio 6,2040/41,2017/18,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1984/85,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1985/86,12.82,132590
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1986/87,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1987/88,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1988/89,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1989/90,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1990/91,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1991/92,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1992/93,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1993/94,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1994/95,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1995/96,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1996/97,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1997/98,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1998/99,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,1999/2000,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2000/01,0.57,5680
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2001/02,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2002/03,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2003/04,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2004/05,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2005/06,0.63,5650
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2006/07,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2007/08,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2008/09,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2009/10,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2010/11,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2011/12,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2012/13,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2013/14,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2014/15,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2015/16,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2016/17,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2035/36,2017/18,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1984/85,3.08,21200
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1985/86,54.3,1151070
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1986/87,0.16,1610
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1987/88,2.5,14970
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1988/89,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1989/90,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1990/91,50.4,732070
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1991/92,0.92,8960
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1992/93,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1993/94,0.32,3330
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1994/95,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1995/96,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1996/97,7.47,125760
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1997/98,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1998/99,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,1999/2000,0.04,480
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2000/01,48.55,802730
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2001/02,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2002/03,0.04,180
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2003/04,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2004/05,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2005/06,49.84,935650
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2006/07,1.48,14110
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2007/08,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2008/09,8.49,85000
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2009/10,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2010/11,15.91,325980
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2011/12,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2012/13,0.76,5090
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2013/14,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2014/15,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2015/16,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2016/17,0,0
+Sensitivity 01: A build-out of batteries and renewables while maintaining 35 GW of unabated gas,2040/41,2017/18,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1984/85,12.97,180300
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1985/86,35.93,376520
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1986/87,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1987/88,0.02,90
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1988/89,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1989/90,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1990/91,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1991/92,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1992/93,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1993/94,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1994/95,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1995/96,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1996/97,2.68,25080
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1997/98,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1998/99,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,1999/2000,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2000/01,0.02,70
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2001/02,0.01,10
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2002/03,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2003/04,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2004/05,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2005/06,0.01,40
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2006/07,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2007/08,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2008/09,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2009/10,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2010/11,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2011/12,3.98,47890
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2012/13,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2013/14,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2014/15,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2015/16,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2016/17,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2030/31,2017/18,0.01,30
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1984/85,8.78,130340
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1985/86,41.74,491380
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1986/87,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1987/88,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1988/89,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1989/90,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1990/91,0.49,4640
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1991/92,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1992/93,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1993/94,0.03,250
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1994/95,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1995/96,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1996/97,0.19,1460
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1997/98,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1998/99,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,1999/2000,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2000/01,12.94,110470
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2001/02,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2002/03,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2003/04,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2004/05,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2005/06,6.96,80900
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2006/07,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2007/08,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2008/09,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2009/10,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2010/11,0.32,3080
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2011/12,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2012/13,0.69,6240
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2013/14,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2014/15,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2015/16,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2016/17,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2035/36,2017/18,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1984/85,7.41,123210
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1985/86,42.96,662090
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1986/87,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1987/88,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1988/89,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1989/90,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1990/91,7.5,60720
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1991/92,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1992/93,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1993/94,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1994/95,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1995/96,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1996/97,0.83,9790
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1997/98,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1998/99,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,1999/2000,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2000/01,22.36,227620
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2001/02,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2002/03,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2003/04,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2004/05,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2005/06,17.12,216760
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2006/07,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2007/08,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2008/09,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2009/10,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2010/11,1.27,14860
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2011/12,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2012/13,0.53,4910
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2013/14,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2014/15,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2015/16,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2016/17,0,0
+Sensitivity 02: Portfolio 1 with a 10% demand increase at all times,2040/41,2017/18,0,0
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1984/85,27.54,577160
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1985/86,78.32,1509770
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1986/87,2.31,18980
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1987/88,0.59,4380
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1988/89,0.62,7340
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1989/90,1.49,13530
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1990/91,112.83,1444440
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1991/92,7,67530
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1992/93,0,0
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1993/94,7.63,70150
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1994/95,0,0
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1995/96,0.07,300
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1996/97,104.55,2275380
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1997/98,0,0
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1998/99,5.29,56010
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,1999/2000,0.45,3500
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2000/01,64.01,956870
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2001/02,0,0
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2002/03,2.17,19900
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2003/04,0.19,1690
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2004/05,0,0
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2005/06,59.3,1048310
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2006/07,0.71,6090
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2007/08,0,0
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2008/09,13.32,119720
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2009/10,0.09,510
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2010/11,24.91,474040
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2011/12,2.51,22050
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2012/13,14.24,220720
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2013/14,0,0
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2014/15,0.35,1800
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2015/16,0,0
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2016/17,0.06,200
+Sensitivity 03: Portfolio 1 with a 20% demand increase at all times,2040/41,2017/18,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1984/85,3.22,25460
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1985/86,3.33,23100
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1986/87,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1987/88,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1988/89,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1989/90,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1990/91,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1991/92,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1992/93,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1993/94,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1994/95,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1995/96,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1996/97,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1997/98,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1998/99,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,1999/2000,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2000/01,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2001/02,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2002/03,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2003/04,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2004/05,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2005/06,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2006/07,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2007/08,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2008/09,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2009/10,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2010/11,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2011/12,0.01,10
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2012/13,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2013/14,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2014/15,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2015/16,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2016/17,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2030/31,2017/18,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1984/85,0.94,5330
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1985/86,4.14,29180
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1986/87,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1987/88,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1988/89,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1989/90,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1990/91,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1991/92,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1992/93,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1993/94,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1994/95,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1995/96,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1996/97,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1997/98,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1998/99,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,1999/2000,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2000/01,0.05,240
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2001/02,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2002/03,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2003/04,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2004/05,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2005/06,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2006/07,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2007/08,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2008/09,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2009/10,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2010/11,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2011/12,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2012/13,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2013/14,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2014/15,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2015/16,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2016/17,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2035/36,2017/18,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1984/85,0.22,1160
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1985/86,3.27,30040
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1986/87,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1987/88,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1988/89,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1989/90,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1990/91,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1991/92,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1992/93,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1993/94,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1994/95,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1995/96,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1996/97,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1997/98,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1998/99,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,1999/2000,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2000/01,0.02,90
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2001/02,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2002/03,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2003/04,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2004/05,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2005/06,0.04,200
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2006/07,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2007/08,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2008/09,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2009/10,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2010/11,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2011/12,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2012/13,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2013/14,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2014/15,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2015/16,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2016/17,0,0
+Sensitivity 04: Portfolio 1 with a 1% demand reduction at all times,2040/41,2017/18,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1984/85,6.41,67130
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1985/86,13.01,113870
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1986/87,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1987/88,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1988/89,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1989/90,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1990/91,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1991/92,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1992/93,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1993/94,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1994/95,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1995/96,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1996/97,0.25,1930
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1997/98,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1998/99,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,1999/2000,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2000/01,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2001/02,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2002/03,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2003/04,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2004/05,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2005/06,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2006/07,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2007/08,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2008/09,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2009/10,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2010/11,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2011/12,0.48,4220
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2012/13,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2013/14,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2014/15,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2015/16,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2016/17,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2030/31,2017/18,0.02,110
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1984/85,3.13,26650
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1985/86,12.98,106940
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1986/87,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1987/88,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1988/89,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1989/90,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1990/91,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1991/92,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1992/93,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1993/94,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1994/95,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1995/96,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1996/97,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1997/98,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1998/99,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,1999/2000,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2000/01,0.21,1560
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2001/02,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2002/03,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2003/04,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2004/05,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2005/06,0.15,1310
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2006/07,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2007/08,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2008/09,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2009/10,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2010/11,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2011/12,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2012/13,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2013/14,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2014/15,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2015/16,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2016/17,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2035/36,2017/18,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1984/85,0.54,3560
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1985/86,8.92,91230
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1986/87,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1987/88,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1988/89,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1989/90,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1990/91,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1991/92,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1992/93,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1993/94,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1994/95,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1995/96,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1996/97,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1997/98,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1998/99,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,1999/2000,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2000/01,0.06,460
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2001/02,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2002/03,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2003/04,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2004/05,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2005/06,0.11,690
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2006/07,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2007/08,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2008/09,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2009/10,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2010/11,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2011/12,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2012/13,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2013/14,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2014/15,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2015/16,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2016/17,0,0
+Sensitivity 05: Portfolio 1 with a doubling of unabated gas forced outage rates,2040/41,2017/18,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1984/85,1.52,9450
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1985/86,6.21,47080
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1986/87,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1987/88,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1988/89,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1989/90,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1990/91,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1991/92,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1992/93,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1993/94,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1994/95,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1995/96,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1996/97,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1997/98,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1998/99,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,1999/2000,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2000/01,0.1,440
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2001/02,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2002/03,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2003/04,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2004/05,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2005/06,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2006/07,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2007/08,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2008/09,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2009/10,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2010/11,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2011/12,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2012/13,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2013/14,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2014/15,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2015/16,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2016/17,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2035/36,2017/18,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1984/85,0.64,7580
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1985/86,6.21,63560
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1986/87,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1987/88,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1988/89,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1989/90,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1990/91,44.75,657330
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1991/92,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1992/93,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1993/94,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1994/95,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1995/96,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1996/97,0.06,600
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1997/98,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1998/99,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,1999/2000,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2000/01,0.06,450
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2001/02,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2002/03,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2003/04,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2004/05,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2005/06,2.97,30710
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2006/07,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2007/08,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2008/09,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2009/10,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2010/11,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2011/12,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2012/13,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2013/14,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2014/15,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2015/16,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2016/17,0,0
+Sensitivity 06: Portfolio 1 with only 4 TWh hydrogen storage from 2035,2040/41,2017/18,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1984/85,1.52,9450
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1985/86,6.23,47100
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1986/87,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1987/88,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1988/89,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1989/90,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1990/91,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1991/92,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1992/93,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1993/94,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1994/95,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1995/96,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1996/97,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1997/98,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1998/99,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,1999/2000,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2000/01,0.1,440
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2001/02,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2002/03,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2003/04,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2004/05,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2005/06,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2006/07,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2007/08,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2008/09,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2009/10,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2010/11,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2011/12,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2012/13,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2013/14,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2014/15,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2015/16,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2016/17,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2035/36,2017/18,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1984/85,12.24,255480
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1985/86,48.24,852950
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1986/87,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1987/88,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1988/89,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1989/90,3.96,37710
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1990/91,97.33,1538710
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1991/92,1.56,15720
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1992/93,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1993/94,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1994/95,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1995/96,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1996/97,8.49,92450
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1997/98,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1998/99,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,1999/2000,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2000/01,27.07,398420
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2001/02,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2002/03,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2003/04,0.02,110
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2004/05,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2005/06,50.24,782560
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2006/07,1.71,15200
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2007/08,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2008/09,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2009/10,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2010/11,4.51,75410
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2011/12,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2012/13,0.37,4610
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2013/14,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2014/15,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2015/16,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2016/17,0,0
+Sensitivity 07: Portfolio 1 with only 2 TWh hydrogen storage from 2035,2040/41,2017/18,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1984/85,1.45,9910
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1985/86,8.25,67140
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1986/87,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1987/88,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1988/89,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1989/90,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1990/91,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1991/92,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1992/93,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1993/94,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1994/95,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1995/96,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1996/97,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1997/98,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1998/99,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,1999/2000,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2000/01,0.44,3440
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2001/02,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2002/03,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2003/04,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2004/05,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2005/06,0.18,1640
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2006/07,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2007/08,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2008/09,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2009/10,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2010/11,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2011/12,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2012/13,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2013/14,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2014/15,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2015/16,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2016/17,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2035/36,2017/18,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1984/85,0.4,3180
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1985/86,11.78,127940
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1986/87,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1987/88,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1988/89,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1989/90,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1990/91,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1991/92,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1992/93,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1993/94,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1994/95,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1995/96,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1996/97,0.02,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1997/98,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1998/99,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,1999/2000,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2000/01,0.44,3250
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2001/02,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2002/03,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2003/04,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2004/05,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2005/06,0.72,7000
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2006/07,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2007/08,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2008/09,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2009/10,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2010/11,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2011/12,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2012/13,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2013/14,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2014/15,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2015/16,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2016/17,0,0
+Sensitivity 08: Portfolio 1 with new interconnection removed,2040/41,2017/18,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1984/85,4.14,36180
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1985/86,6.05,48550
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1986/87,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1987/88,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1988/89,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1989/90,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1990/91,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1991/92,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1992/93,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1993/94,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1994/95,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1995/96,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1996/97,0.02,80
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1997/98,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1998/99,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,1999/2000,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2000/01,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2001/02,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2002/03,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2003/04,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2004/05,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2005/06,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2006/07,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2007/08,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2008/09,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2009/10,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2010/11,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2011/12,0.1,310
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2012/13,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2013/14,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2014/15,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2015/16,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2016/17,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2030/31,2017/18,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1984/85,1.67,10500
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1985/86,7.56,60250
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1986/87,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1987/88,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1988/89,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1989/90,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1990/91,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1991/92,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1992/93,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1993/94,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1994/95,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1995/96,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1996/97,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1997/98,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1998/99,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,1999/2000,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2000/01,0.21,1450
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2001/02,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2002/03,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2003/04,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2004/05,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2005/06,0.03,230
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2006/07,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2007/08,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2008/09,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2009/10,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2010/11,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2011/12,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2012/13,0.01,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2013/14,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2014/15,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2015/16,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2016/17,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2035/36,2017/18,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1984/85,0.4,2760
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1985/86,8.34,88070
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1986/87,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1987/88,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1988/89,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1989/90,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1990/91,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1991/92,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1992/93,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1993/94,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1994/95,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1995/96,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1996/97,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1997/98,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1998/99,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,1999/2000,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2000/01,0.23,2130
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2001/02,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2002/03,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2003/04,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2004/05,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2005/06,0.24,2340
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2006/07,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2007/08,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2008/09,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2009/10,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2010/11,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2011/12,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2012/13,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2013/14,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2014/15,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2015/16,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2016/17,0,0
+Sensitivity 09: Portfolio 1 with a 10% reduction in import availability at all times,2040/41,2017/18,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1984/85,5.42,57470
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1985/86,37.59,382750
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1986/87,0.65,2850
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1987/88,1.11,7560
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1988/89,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1989/90,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1990/91,0.5,3790
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1991/92,2.8,17570
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1992/93,0.27,1860
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1993/94,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1994/95,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1995/96,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1996/97,10.14,79380
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1997/98,0.16,700
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1998/99,0.73,5110
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,1999/2000,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2000/01,3.94,33760
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2001/02,0.77,7040
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2002/03,0.59,3250
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2003/04,8.48,70470
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2004/05,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2005/06,8.07,75350
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2006/07,1.76,15710
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2007/08,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2008/09,0.29,2090
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2009/10,0.05,270
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2010/11,0.15,910
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2011/12,7.88,75150
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2012/13,0.06,200
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2013/14,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2014/15,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2015/16,0.79,4200
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2016/17,0.51,2460
+Sensitivity 10: Portfolio 1 with no imports across the year,2030/31,2017/18,2.22,13280
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1984/85,3.7,35800
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1985/86,49.84,536390
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1986/87,0.49,2250
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1987/88,0.01,10
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1988/89,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1989/90,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1990/91,49.75,406850
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1991/92,0.87,7140
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1992/93,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1993/94,1.2,8810
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1994/95,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1995/96,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1996/97,3.73,24260
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1997/98,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1998/99,0.05,380
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,1999/2000,0.63,5470
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2000/01,52.23,561460
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2001/02,0.18,1280
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2002/03,0.96,7270
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2003/04,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2004/05,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2005/06,43.46,523370
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2006/07,0.1,780
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2007/08,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2008/09,8.47,70780
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2009/10,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2010/11,10.8,133610
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2011/12,0.05,270
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2012/13,3.31,25220
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2013/14,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2014/15,0.86,6080
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2015/16,0.17,1250
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2016/17,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2035/36,2017/18,0.22,1830
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1984/85,1.55,11570
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1985/86,47.15,660040
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1986/87,5.64,60990
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1987/88,0.18,1100
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1988/89,0.27,860
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1989/90,0.13,1140
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1990/91,85.39,912180
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1991/92,0.81,4610
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1992/93,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1993/94,2.11,19110
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1994/95,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1995/96,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1996/97,52.74,939090
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1997/98,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1998/99,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,1999/2000,0.01,20
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2000/01,52.23,683340
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2001/02,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2002/03,0.71,4590
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2003/04,0.04,70
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2004/05,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2005/06,51.74,784370
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2006/07,0.35,3190
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2007/08,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2008/09,8.67,60920
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2009/10,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2010/11,11.4,184540
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2011/12,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2012/13,0.13,1090
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2013/14,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2014/15,0.04,340
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2015/16,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2016/17,0,0
+Sensitivity 10: Portfolio 1 with no imports across the year,2040/41,2017/18,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1984/85,2.97,26210
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1985/86,7.68,65160
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1986/87,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1987/88,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1988/89,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1989/90,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1990/91,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1991/92,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1992/93,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1993/94,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1994/95,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1995/96,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1996/97,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1997/98,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1998/99,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,1999/2000,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2000/01,0.09,540
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2001/02,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2002/03,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2003/04,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2004/05,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2005/06,0.01,60
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2006/07,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2007/08,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2008/09,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2009/10,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2010/11,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2011/12,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2012/13,0.02,140
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2013/14,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2014/15,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2015/16,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2016/17,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2035/36,2017/18,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1984/85,3.34,33440
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1985/86,9.06,103920
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1986/87,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1987/88,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1988/89,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1989/90,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1990/91,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1991/92,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1992/93,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1993/94,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1994/95,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1995/96,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1996/97,0.07,320
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1997/98,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1998/99,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,1999/2000,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2000/01,0.07,510
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2001/02,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2002/03,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2003/04,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2004/05,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2005/06,0.26,2510
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2006/07,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2007/08,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2008/09,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2009/10,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2010/11,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2011/12,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2012/13,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2013/14,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2014/15,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2015/16,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2016/17,0,0
+Sensitivity 11: Portfolio 1 with explicit flexible demand maintained at the assumed committed 2030 levels,2040/41,2017/18,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1984/85,0.4,2050
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1985/86,0.9,6590
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1986/87,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1987/88,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1988/89,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1989/90,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1990/91,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1991/92,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1992/93,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1993/94,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1994/95,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1995/96,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1996/97,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1997/98,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1998/99,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,1999/2000,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2000/01,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2001/02,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2002/03,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2003/04,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2004/05,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2005/06,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2006/07,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2007/08,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2008/09,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2009/10,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2010/11,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2011/12,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2012/13,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2013/14,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2014/15,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2015/16,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2016/17,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2035/36,2017/18,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1984/85,0.08,470
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1985/86,1.4,10540
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1986/87,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1987/88,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1988/89,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1989/90,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1990/91,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1991/92,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1992/93,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1993/94,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1994/95,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1995/96,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1996/97,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1997/98,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1998/99,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,1999/2000,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2000/01,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2001/02,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2002/03,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2003/04,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2004/05,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2005/06,0.1,780
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2006/07,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2007/08,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2008/09,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2009/10,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2010/11,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2011/12,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2012/13,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2013/14,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2014/15,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2015/16,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2016/17,0,0
+Sensitivity 12: Portfolio 1 with higher offshore wind capacity (80.5 GW by 2035 and 96 GW by 2040),2040/41,2017/18,0,0
