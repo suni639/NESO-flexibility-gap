@@ -82,24 +82,48 @@ dunkelflaute, worst_date = identify_dunkelflaute_window(df, window_days=7) # 7 D
 # --- 3. Dashboard Header ---
 st.title("⚡ Clean Power 2030: The Green Energy Gap")
 
-st.markdown("""
-### 🌍 The Context: Clean Power 2030 vs. The Weather
-**The Mission:** The Government's **Clean Power 2030 (CP30)** roadmap aims to decarbonise the UK grid, relying heavily on wind and solar. While this works for "average" weather, it creates a critical vulnerability during extreme events.
+# --- Section: Project Context & Analysis (Collapsible) ---
 
-**The Threat:** A **"Dunkelflaute"** (Dark Wind Lull) is a recurring weather phenomenon where high pressure freezes wind speeds (<10% capacity) and blocks sunlight for **3–10 days** across Northern Europe.
-* **The Risk:** These events coincide with cold snaps (peak heating demand) and affect neighbouring countries simultaneously, making imports unreliable.
-* **The Question:** As fossil fuels retire, what keeps the lights on when the wind stops for a week?
+with st.expander("🌍 Strategic Context: Clean Power 2030 & Key Findings", expanded=False):
+    st.markdown("""
+    ### 🌍 The Context: Clean Power 2030 vs. The Weather
+    **The Mission:** The Government's **Clean Power 2030 (CP30)** roadmap aims to decarbonise the UK grid. While this works for "average" weather, it creates a critical vulnerability during extreme events.
 
----
+    **The Threat:** A **"Dunkelflaute"** (Dark Wind Lull) is a recurring weather phenomenon where high pressure freezes wind speeds (<10% capacity) and blocks sunlight for **3–10 days**.
+    * **The Risk:** These events coincide with cold snaps (peak heating demand) and affect neighbouring countries simultaneously, making imports unreliable.
+    * **The Question:** As fossil fuels retire, what keeps the lights on when the wind stops for a week?
 
-### 🎯 The Goal & Key Findings
-**The Goal:** To quantify the **"Clean Power Gap"**—the specific volume of firm, dispatchable capacity (GW) and energy (TWh) required to secure the UK grid during a severe weather stress event (*Dunkelflaute*), assuming the full delivery of the Government's Clean Power 2030 renewable targets.
+    ---
 
-**The Findings:**
-* **The "Gap" Defined:** During a severe winter calm (modelled on 2025 weather patterns scaled to 2030), the grid faces a capacity shortfall of **~51 GW**, even after dispatching a targeted 25 GW battery fleet.
-* **The Failure Mode:** Short-duration (Li-ion) batteries exhausted their energy reserves within the **first 24 hours** of the 120-hour stress window.
-* **Strategic Implication:** The project highlights the vulnerability of the energy system, proving that "Flexibility" is not a single bucket. While batteries solve *intraday* volatility (seconds to hours), they provide **zero security** for *inter-day* weather risks. The 51 GW gap effectively defines the requirement for **Long Duration Energy Storage (LDES)** and Low-Carbon Gas (CCS/Hydrogen).
-""")
+    ### 🎯 The Goal & Key Findings
+    **The Goal:** To quantify the **"Clean Power Gap"**—the specific volume of firm, dispatchable capacity (GW) and energy (TWh) required to secure the UK grid during a severe weather stress event (*Dunkelflaute*), assuming full delivery of CP30 targets.
+
+    **The Findings:**
+    * **The "Gap" Defined:** During a severe winter calm (modelled on 2025 weather patterns scaled to 2030), the grid faces a capacity shortfall of **~51 GW**.
+    * **The Failure Mode:** Short-duration (Li-ion) batteries exhausted their energy reserves within the **first 24 hours** of the 120-hour stress window.
+    * **Strategic Implication:** Batteries solve *intraday* volatility but provide **zero security** for *inter-day* weather risks. The 51 GW gap effectively defines the requirement for **Long Duration Energy Storage (LDES)** and Low-Carbon Gas (CCS/Hydrogen).
+    """)
+
+with st.expander("🛡️ Mitigations & The 'Dispatch Stack'", expanded=False):
+    st.markdown("""
+    If batteries fail the 5-day test (as shown by the model), the project highlights the hierarchy of mitigations required to fill the 51 GW gap:
+
+    | Tier | Mitigation Strategy | Potential Impact | Risk / Limitation |
+    | :--- | :--- | :--- | :--- |
+    | **1** | **Interconnectors** | ~10-15 GW | **High Risk.** We can import power, but only if our neighbours aren't suffering the same weather event. |
+    | **2** | **Nuclear** | ~4-6 GW | **Inflexible.** Provides a stable floor (Baseload) but cannot easily "ramp up" to fill a sudden 50GW gap. |
+    | **3** | **Demand Side Response (DSR)** | ~5-10 GW | **Consumer Action.** Paying heavy industry to shut down and consumers to lower usage. |
+    | **4** | **The Strategic Reserve** | **~30 GW** | **The Gap Filler.** The remaining shortfall must be met by Gas with CCS (Carbon Capture), Hydrogen Turbines, or keeping unabated gas plants on standby as a "last resort" insurance policy. |
+    """)
+
+with st.expander("⚙️ Data & Methodology", expanded=False):
+    st.markdown("""
+    A **"Digital Twin"** approach was utilised to stress-test the 2030 grid:
+
+    * **Weather Profile:** Used **2025 Historic Demand & Settlement Data (Elexon)** to capture the exact physics of a "Cold Dunkelflaute" (load factors <3%).
+    * **Future Scaling:** Applied **NESO FES 2030** and **CP30 Action Plan** targets to scale the wind/solar amplitude (e.g., scaling wind output to hit 50 GW capacity).
+    * **Simulation Engine:** A custom Python dispatch engine calculated the net deficit half-hour by half-hour, prioritising `Renewables` > `Batteries` > `Fossil Backup`.
+    """)
 
 # --- 4. KPI Metrics Row ---
 col1, col2, col3, col4 = st.columns(4)
