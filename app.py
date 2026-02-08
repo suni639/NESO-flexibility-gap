@@ -81,7 +81,15 @@ dunkelflaute, worst_date = identify_dunkelflaute_window(df, window_days=7) # 7 D
 
 # --- 3. Dashboard Header ---
 st.title("⚡ Clean Power 2030: The Green Energy Gap")
-st.markdown(f"**Scenario Analysis:** To quantify the Clean Power Gap — the volume of firm, dispatchable capacity (GW) and energy (TWh) required to secure the UK grid during a severe weather stress event (Dunkelflaute), assuming the full delivery of the Clean Power 2030 renewable targets.")
+st.markdown("""
+### 🎯 The Goal & Key Findings
+**The Goal:** To quantify the **"Clean Power Gap"**—the specific volume of firm, dispatchable capacity (GW) and energy (TWh) required to secure the UK grid during a severe weather stress event (*Dunkelflaute*), assuming the full delivery of the Government's Clean Power 2030 renewable targets.
+
+**The Findings:**
+* **The "Gap" Defined:** During a severe winter calm (modelled on 2025 weather patterns scaled to 2030), the grid faces a capacity shortfall of **~51 GW**, even after dispatching a targeted 25 GW battery fleet.
+* **The Failure Mode:** Short-duration (Li-ion) batteries exhausted their energy reserves within the **first 24 hours** of the 120-hour stress window.
+* **Strategic Implication:** The project highlights the vulnerability of the energy system, proving that "Flexibility" is not a single bucket. While batteries solve *intraday* volatility (seconds to hours), they provide **zero security** for *inter-day* weather risks. The 51 GW gap effectively defines the requirement for **Long Duration Energy Storage (LDES)** and Low-Carbon Gas (CCS/Hydrogen).
+""")
 
 # --- 4. KPI Metrics Row ---
 col1, col2, col3, col4 = st.columns(4)
