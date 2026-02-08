@@ -81,7 +81,17 @@ dunkelflaute, worst_date = identify_dunkelflaute_window(df, window_days=7) # 7 D
 
 # --- 3. Dashboard Header ---
 st.title("⚡ Clean Power 2030: The Green Energy Gap")
+
 st.markdown("""
+### 🌍 The Context: Clean Power 2030 vs. The Weather
+**The Mission:** The Government's **Clean Power 2030 (CP30)** roadmap aims to decarbonise the UK grid, relying heavily on wind and solar. While this works for "average" weather, it creates a critical vulnerability during extreme events.
+
+**The Threat:** A **"Dunkelflaute"** (Dark Wind Lull) is a recurring weather phenomenon where high pressure freezes wind speeds (<10% capacity) and blocks sunlight for **3–10 days** across Northern Europe.
+* **The Risk:** These events coincide with cold snaps (peak heating demand) and affect neighbouring countries simultaneously, making imports unreliable.
+* **The Question:** As fossil fuels retire, what keeps the lights on when the wind stops for a week?
+
+---
+
 ### 🎯 The Goal & Key Findings
 **The Goal:** To quantify the **"Clean Power Gap"**—the specific volume of firm, dispatchable capacity (GW) and energy (TWh) required to secure the UK grid during a severe weather stress event (*Dunkelflaute*), assuming the full delivery of the Government's Clean Power 2030 renewable targets.
 
