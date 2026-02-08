@@ -38,12 +38,11 @@ In the context of CP30, ***Dunkelflaute*** (a German term for "dark doldrums"—
 
 While the UK aims for a system that is 95% clean, experts such as the National Energy System Operator (NESO) acknowledge that the remaining 5% of the time (i.e., the Dunkelflaute periods) presents the greatest technical and financial risk.
 
-**Definition:** Dunkelflaute is a period characterised by **low wind speeds (<10% capacity)**, **low solar irradiance**, and **cold temperatures** (driving high heating demand).
+* **Definition:** Dunkelflaute is a period characterised by **low wind speeds (<10% capacity)**, **low solar irradiance**, and **cold temperatures** (driving high heating demand).
 
-**Scale of the Challenge:** These are recurring climate features, not anomalies. While minor lulls happen often, historical data confirms that severe events lasting **3–10 days** occur roughly every **2–5 years**. NESO’s analysis suggests that by 2030, the UK could face a deficit of tens of gigawatts during these periods. Current battery technology (which usually provides 2–4 hours of storage) is insufficient for this "long-duration" challenge.
+* **Scale of the Challenge:** These are recurring climate features, not anomalies. While minor lulls happen often, historical data confirms that severe events lasting **3–10 days** occur roughly every **2–5 years**. NESO’s analysis suggests that by 2030, the UK could face a deficit of tens of gigawatts during these periods. Current battery technology (which usually provides 2–4 hours of storage) is insufficient for this "long-duration" challenge.
 
-
-**The "Correlated Risk":** It's important to note that these events are caused by massive high-pressure systems that often sit over the entire North Sea region. This affects the UK, France, Germany, and the Netherlands simultaneously, drastically reducing the reliability of imports just when we'd need them most.
+* **The "Correlated Risk":** It's important to note that these events are caused by massive high-pressure systems that often sit over the entire North Sea region. This affects the UK, France, Germany, and the Netherlands simultaneously, drastically reducing the reliability of imports just when we'd need them most.
 
 ---
 
