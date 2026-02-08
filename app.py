@@ -5,40 +5,64 @@ from src.cp30_targets import CP30_TARGETS
 from src.data_loader import load_weather_template, get_fes_peak_demand, create_2030_profile
 from src.gap_analysis import identify_dunkelflaute_window, run_simple_dispatch
 
-# --- Page Config ---
-st.set_page_config(page_title="NESO Flexibility Gap 2030", layout="wide", page_icon="⚡")
-
-# --- CSS Hack for Metric Consistency ---
-st.markdown("""
-<style>
-/* Force all metric values to be the same size */
-div[data-testid="stMetricValue"] {
-    font-size: 28px !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-# --- Custom CSS for "Strategy Grade" Look ---
+# --- CSS for "Strategy Grade" Cards ---
 st.markdown("""
 <style>
     .metric-card {
-        background-color: #f0f2f6;
+        background-color: #F0F2F6; /* Light gray background */
+        border: 1px solid #E0E0E0;
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 8px;
         text-align: center;
         margin-bottom: 10px;
-    }
-    .big-number {
-        font-size: 24px; 
-        font-weight: bold; 
-        color: #1f77b4;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
     }
     .metric-label {
-        font-size: 14px; 
-        color: #555;
+        font-size: 14px;
+        font-weight: 600;
+        color: #555555;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+    .metric-value {
+        font-size: 26px; /* Fixed font size for ALL cards */
+        font-weight: 700;
+        color: #000000;
+    }
+    .metric-sub {
+        font-size: 12px;
+        color: #888888;
+        margin-top: 5px;
     }
 </style>
 """, unsafe_allow_html=True)
+
+# --- Helper Function to Draw Custom Cards ---
+def strategy_card(label, value, sub_text=""):
+    st.markdown(f"""
+    <div class="metric-card">
+        <div class="metric-label">{label}</div>
+        <div class="metric-value">{value}</div>
+        <div class="metric-sub">{sub_text}</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+# --- YOUR DASHBOARD COLUMNS ---
+c1, c2, c3, c4 = st.columns(4)
+
+with c1:
+    strategy_card("Peak Gap", "51 GW", "Deficit")
+
+with c2:
+    strategy_card("Battery Life", "18 Hours", "Survival Time")
+
+with c3:
+    # Now this text will be the EXACT same size as the numbers
+    strategy_card("Critical Window", "Jan 17 - Jan 22", "5-Day Event")
+
+with c4:
+    strategy_card("Strategic Reserve", "32 GW", "Required Backup")
 
 # --- 1. Sidebar: Scenario Controls ---
 st.sidebar.title("🛠️ Strategy Controls")
