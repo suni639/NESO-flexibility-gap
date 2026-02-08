@@ -8,27 +8,48 @@ from src.gap_analysis import identify_dunkelflaute_window, run_simple_dispatch
 # --- Page Config ---
 st.set_page_config(page_title="NESO Flexibility Gap 2030", layout="wide", page_icon="⚡")
 
-# --- Custom CSS for "Strategy Grade" Look ---
+# --- CSS for "Strategy Grade" Cards ---
 st.markdown("""
 <style>
     .metric-card {
-        background-color: #f0f2f6;
+        background-color: #F0F2F6;
+        border: 1px solid #E0E0E0;
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 8px;
         text-align: center;
         margin-bottom: 10px;
-    }
-    .big-number {
-        font-size: 24px; 
-        font-weight: bold; 
-        color: #1f77b4;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
     }
     .metric-label {
-        font-size: 14px; 
-        color: #555;
+        font-size: 14px;
+        font-weight: 600;
+        color: #555555;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+    }
+    .metric-value {
+        font-size: 26px; /* Fixed font size for ALL cards (Text & Numbers) */
+        font-weight: 700;
+        color: #000000;
+    }
+    .metric-sub {
+        font-size: 12px;
+        color: #888888;
+        margin-top: 5px;
     }
 </style>
 """, unsafe_allow_html=True)
+
+# --- Helper Function to Draw Custom Cards ---
+def strategy_card(label, value, sub_text=""):
+    st.markdown(f"""
+    <div class="metric-card">
+        <div class="metric-label">{label}</div>
+        <div class="metric-value">{value}</div>
+        <div class="metric-sub">{sub_text}</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 # --- 1. Sidebar: Scenario Controls ---
 st.sidebar.title("🛠️ Strategy Controls")
@@ -45,7 +66,8 @@ offshore_wind_target = st.sidebar.select_slider(
 
 # Parse the slider text back to numbers
 wind_gw = int(offshore_wind_target.split("(")[1].replace("GW)", ""))
-CP30_TARGETS['Offshore Wind']['High'] = wind_gw # Update the target dynamically
+# Hack: Update the target dynamically for the simulation
+CP30_TARGETS['Offshore Wind']['High'] = wind_gw 
 
 st.sidebar.divider()
 st.sidebar.info(f"**Current Scenario:**\n\n🔋 {battery_cap}GW / {battery_cap*battery_dur}GWh Storage\n💨 {wind_gw}GW Offshore Wind")
@@ -58,7 +80,6 @@ def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
     peak_2030 = get_fes_peak_demand()
     
     # Create Base Profile
-    # Note: We are hacking the global CP30 dict here for the simulation
     targets = CP30_TARGETS.copy()
     targets['Offshore Wind']['High'] = wind_gw_val
     
@@ -76,14 +97,13 @@ def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
 # Run the logic
 df = load_and_run_simulation(battery_cap, battery_dur, wind_gw)
 
-# Find the worst window
-dunkelflaute, worst_date = identify_dunkelflaute_window(df, window_days=7) # 7 Day view
+# Find the worst window (returns dataframe slice and end timestamp)
+dunkelflaute, worst_date_timestamp = identify_dunkelflaute_window(df, window_days=7)
 
-# --- 3. Dashboard Header ---
+# --- 3. Dashboard Header & Context ---
 st.title("⚡ Clean Power 2030: The Green Energy Gap")
 
-# --- Section: Project Context & Analysis (Collapsible) ---
-
+# --- Expanders for Context ---
 with st.expander("🌍 Strategic Context: Clean Power 2030 & Key Findings", expanded=False):
     st.markdown("""
     ### 🌍 The Context: Clean Power 2030 vs. The Weather
@@ -128,33 +148,31 @@ with st.expander("⚙️ Data & Methodology", expanded=False):
 # --- 4. KPI Metrics Row ---
 col1, col2, col3, col4 = st.columns(4)
 
+# Calculate Metrics
 peak_gap_raw = df['Net_Demand_MW'].max() / 1000
 peak_gap_fixed = df['Unmet_Gap_MW'].max() / 1000
 curtailment = df[df['Net_Demand_MW'] < 0]['Net_Demand_MW'].sum() / 1000000 * -1 # TWh
 
+# Calculate Date Range using the DataFrame Index (Fixes the single date issue)
+start_date_str = dunkelflaute.index.min().strftime('%b %d')
+end_date_str = dunkelflaute.index.max().strftime('%b %d')
+date_range_str = f"{start_date_str} - {end_date_str}"
+
 with col1:
-    st.markdown(f"""<div class="metric-card">
-        <div class="metric-label">Peak Unmet Demand (Raw)</div>
-        <div class="big-number">{peak_gap_raw:,.1f} GW</div>
-    </div>""", unsafe_allow_html=True)
+    strategy_card("Peak Unmet Demand", f"{peak_gap_raw:,.1f} GW", "Raw Deficit")
 
 with col2:
-    st.markdown(f"""<div class="metric-card">
-        <div class="metric-label">Gap After Batteries</div>
-        <div class="big-number" style="color: {'red' if peak_gap_fixed > 0 else 'green'}">{peak_gap_fixed:,.1f} GW</div>
-    </div>""", unsafe_allow_html=True)
+    # Color logic for the value
+    val_color = "red" if peak_gap_fixed > 5 else "orange" if peak_gap_fixed > 0 else "green"
+    # We inject the color style directly into the value string for the helper function
+    styled_value = f'<span style="color:{val_color}">{peak_gap_fixed:,.1f} GW</span>'
+    strategy_card("Gap After Batteries", styled_value, "Remaining Deficit")
 
 with col3:
-    st.markdown(f"""<div class="metric-card">
-        <div class="metric-label">Surplus Energy (Wasted)</div>
-        <div class="big-number">{curtailment:,.1f} TWh</div>
-    </div>""", unsafe_allow_html=True)
+    strategy_card("Surplus Energy", f"{curtailment:,.1f} TWh", "Wasted / Curtailed")
 
 with col4:
-    st.markdown(f"""<div class="metric-card">
-        <div class="metric-label">Critical Window Date</div>
-        <div class="big-number" style="font-size:18px">{worst_date.strftime('%d %b')}</div>
-    </div>""", unsafe_allow_html=True)
+    strategy_card("Critical Window", date_range_str, "Worst 7-Day Event")
 
 # --- 5. The "Crime Scene" Chart (Dunkelflaute) ---
 st.subheader("🔎 The 'Dunkelflaute' Event (Worst 7 Days)")
@@ -178,7 +196,6 @@ fig.add_trace(go.Scatter(
 ))
 
 # Battery Output (Stacked on top of Clean Gen)
-# We show battery discharging as "Adding to Supply"
 battery_contribution = dunkelflaute['Battery_Output_MW'].clip(lower=0) / 1000
 fig.add_trace(go.Scatter(
     x=dunkelflaute.index, y=total_clean + battery_contribution,
@@ -192,7 +209,8 @@ fig.update_layout(
     yaxis_title="Power (GW)",
     height=500,
     hovermode="x unified",
-    legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01)
+    legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01),
+    margin=dict(l=0, r=0, t=30, b=0)
 )
 st.plotly_chart(fig, use_container_width=True)
 
@@ -210,13 +228,15 @@ with st.expander("🔋 View Battery State of Charge Analysis"):
     fig_soc.update_layout(
         title="Battery State of Charge (GWh)",
         yaxis_title="Energy Stored (GWh)",
-        height=300
+        height=300,
+        margin=dict(l=0, r=0, t=30, b=0)
     )
     st.plotly_chart(fig_soc, use_container_width=True)
 
 # --- 7. Strategic Insight Box ---
 st.divider()
 st.markdown("### 💡 Strategic Insight")
+
 if peak_gap_fixed > 5:
     st.error(f"**CRITICAL RISK:** Even with {battery_cap}GW of batteries, the grid is short by {peak_gap_fixed:.1f} GW. This confirms that short-duration lithium-ion batteries cannot solve a multi-day Dunkelflaute. **Strategic Implication:** We need Hydrogen or Gas CCS.")
 elif peak_gap_fixed > 0:
