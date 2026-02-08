@@ -1,7 +1,26 @@
 # 🇬🇧 Clean Power 2030: The Green Energy Gap
 ### *Stress-testing the UK grid against a 1-in-10-year wind drought.*
 
+<br>
+
+<h3 align="center">🚀 Click below to launch the interactive strategy dashboard:</h3>
+
+<p align="center">
+  <a href="https://neso-flexibility-gap-ngtgqkkhevm2uu4sa4ew2k.streamlit.app/" target="_blank">
+    <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open Live Streamlit Dashboard" height="85">
+  </a>
+</p>
+
+<p align="center">
+  <em>This runs the full simulation instantly in your web browser.<br>No installation or technical knowledge required.</em>
+</p>
+
+<br>
+
+<p align="center">
+  
 ![Project Status](https://img.shields.io/badge/Status-Complete-green) ![Python](https://img.shields.io/badge/Built%20With-Python%20%7C%20Streamlit-blue) ![Data](https://img.shields.io/badge/Data-NESO%20%7C%20Elexon%20%7C%20UK%20Gov-orange)
+</p>
 
 ---
 
