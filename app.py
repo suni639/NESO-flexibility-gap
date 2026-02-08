@@ -8,6 +8,16 @@ from src.gap_analysis import identify_dunkelflaute_window, run_simple_dispatch
 # --- Page Config ---
 st.set_page_config(page_title="NESO Flexibility Gap 2030", layout="wide", page_icon="⚡")
 
+# --- CSS Hack for Metric Consistency ---
+st.markdown("""
+<style>
+/* Force all metric values to be the same size */
+div[data-testid="stMetricValue"] {
+    font-size: 28px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # --- Custom CSS for "Strategy Grade" Look ---
 st.markdown("""
 <style>
