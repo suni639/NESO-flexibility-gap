@@ -1,4 +1,4 @@
-# 🇬🇧 Clean Power 2030: The Green Energy Gap
+# UK Clean Power 2030: The Green Energy Gap
 ### *Stress-testing the UK grid against a 1-in-10-year wind drought.*
 
 <br>
