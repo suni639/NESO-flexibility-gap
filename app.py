@@ -79,16 +79,19 @@ def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
     weather = load_weather_template()
     peak_2030 = get_fes_peak_demand()
     
-    # Create Base Profile
+    # --- THE FIX: SAFETY COPY ---
+    # We must copy the inner dictionary too, otherwise we modify the global variable!
     targets = CP30_TARGETS.copy()
+    targets['Offshore Wind'] = CP30_TARGETS['Offshore Wind'].copy() 
     targets['Offshore Wind']['High'] = wind_gw_val
     
     scenario_df = create_2030_profile(weather, targets, peak_2030)
     
     # Run Battery Dispatch
+    # Ensure inputs are converted correctly (GW -> MW)
     dispatched_df = run_simple_dispatch(
         scenario_df, 
-        battery_capacity_mw=bat_cap*1000, 
+        battery_capacity_mw=bat_cap * 1000, 
         battery_duration_hours=bat_dur
     )
     
