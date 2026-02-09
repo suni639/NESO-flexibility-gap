@@ -143,7 +143,7 @@ with st.expander("⚙️ Data & Methodology", expanded=False):
     st.markdown("""
     A **"Digital Twin"** approach was utilised to stress-test the 2030 grid:
 
-    * **Weather Profile:** Used **2025 Historic Demand & Settlement Data (Elexon)** to capture the exact physics of a "Cold Dunkelflaute" (load factors <3%).
+    * **Weather Profile:** Used **2025 Historic Demand & Settlement Data (Elexon)** to replicate the scenario of a "Cold Dunkelflaute" (i.e., the coldest and darkest week in 2025). 
     * **Future Scaling:** Applied **NESO FES 2030** and **CP30 Action Plan** targets to scale the wind/solar amplitude (e.g., scaling wind output to hit 50 GW capacity).
     * **Simulation Engine:** A custom Python dispatch engine calculated the net deficit half-hour by half-hour, prioritising `Renewables` > `Batteries` > `Fossil Backup`.
     """)
