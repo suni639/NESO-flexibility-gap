@@ -52,7 +52,7 @@ def strategy_card(label, value, sub_text=""):
     """, unsafe_allow_html=True)
 
 # --- 1. Sidebar: Scenario Controls ---
-st.sidebar.title("🛠️ Strategy Controls")
+st.sidebar.title("🛠️ Controls")
 st.sidebar.markdown("Adjust 2030 assumptions to close the gap.")
 
 # Scenario Sliders
@@ -236,9 +236,9 @@ with st.expander("🔋 View Battery State of Charge Analysis"):
     )
     st.plotly_chart(fig_soc, use_container_width=True)
 
-# --- 7. Strategic Insight Box ---
+# --- 7. Insight Box ---
 st.divider()
-st.markdown("### 💡 Strategic Insight")
+st.markdown("### 💡 Risk Level")
 
 if peak_gap_fixed > 5:
     st.error(f"**CRITICAL RISK:** Even with {battery_cap}GW of batteries, the grid is short by {peak_gap_fixed:.1f} GW. This confirms that short-duration lithium-ion batteries cannot solve a multi-day Dunkelflaute. **Strategic Implication:** We need Hydrogen or Gas CCS.")
