@@ -85,6 +85,17 @@ st.sidebar.subheader("🧪 Mitigations")
 enable_hydrogen = st.sidebar.checkbox("Hydrogen / CCS (5 GW)", value=False)
 enable_dsr = st.sidebar.checkbox("Aggressive DSR (3 GW)", value=False)
 
+# --- NEW: Chart Legend in Sidebar ---
+st.sidebar.divider()
+st.sidebar.markdown("### 📉 Chart Legend")
+st.sidebar.info("""
+**Visualising the Dispatch Stack:**
+
+* 🟢 **Bottom (Green/Blue):** Must-run Renewables & Nuclear.
+* 🟠 **Middle (Orange):** Batteries discharging to shave peaks (note how they empty quickly).
+* 🔴 **Top (Red):** The **Unmet Gap**. This is the risk zone where strategic reserves are required.
+""")
+
 # --- 2. Main Execution Engine ---
 @st.cache_data
 def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
@@ -126,7 +137,7 @@ st.title("⚡ Clean Power 2030: The Resilience Test")
 st.markdown("### Stress-testing the UK Grid against 'Dunkelflaute' severe weather events")
 st.divider()
 
-# --- 4. KPI Metrics Row (Moved to Top) ---
+# --- 4. KPI Metrics Row (Top) ---
 col1, col2, col3, col4 = st.columns(4)
 
 curtailment = df[df['Net_Demand_MW'] < 0]['Net_Demand_MW'].sum() / 1000000 * -1 
@@ -148,7 +159,6 @@ with col4:
     strategy_card("Real-World Gap", styled_value, "Unmet Peak Demand")
 
 # --- 5. The "Merit Order" Chart (Stacked Area) ---
-# Now immediately follows the KPIs
 st.subheader("🔎 The Dispatch Stack")
 
 fig = go.Figure()
@@ -230,19 +240,11 @@ fig.update_layout(
 )
 st.plotly_chart(fig, use_container_width=True)
 
-# --- 6. Mind The Gap Analysis ---
-st.markdown("### 📝 Mind The Gap")
-st.markdown("""
-The chart above visualises the **Merit Order** (supply stack) during the stress event.
-* **Bottom (Green/Blue):** Must-run Renewables and Nuclear.
-* **Middle (Orange):** Batteries discharging to shave peaks (note how they empty quickly).
-* **Top (Red):** The **Unmet Gap**. This is the risk zone where strategic reserves are required.
-""")
-
+# Gap Analysis Message (Kept under chart for context)
 if peak_gap_fixed > 5:
     st.error(f"⚠️ **Analysis:** Even with mitigations, a **{peak_gap_fixed:.1f} GW gap** remains. This confirms the critical need for Long Duration Energy Storage (LDES).")
 
-# --- 7. TABS (Moved to Bottom) ---
+# --- 6. TABS (Bottom) ---
 st.divider()
 st.markdown("### 📚 Context & Methodology")
 tab_context, tab_method, tab_market, tab_refs = st.tabs(["❄️ The Weather Challenge", "🧪 Methodology", "🏗️ Strategic Levers", "📚 References"])
@@ -281,8 +283,8 @@ with tab_method:
     st.markdown("""
     We stress-tested the 2030 grid using a "Digital Twin" approach:
     
-    1.  **Weather Pattern:** 2025 demand and settlement data (Elexon) was utilised to identify the worst 7-day "cold and calm" window.
-    2.  **Future Scaling:** **NESO FES 2030** and **CP30 Action Plan** targets were utilised to scale the wind and solar capacity.
+    1.  **Weather Pattern:** 2025 demand and settlement data (Elexon) was used to identify the worst 7-day "cold and calm" window.
+    2.  **Future Scaling:** **NESO FES 2030** and **CP30 Action Plan** targets were used to scale the wind and solar capacity.
     3.  **Dispatch Engine:** A custom Python engine (see codebase link in References) calculated the net deficit half-hour by half-hour, prioritising:
         * `Renewables (Zero Marginal Cost)`
         * `Nuclear (Baseload)`
