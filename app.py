@@ -281,7 +281,7 @@ with tab_context:
 with tab_method:
     st.markdown("### 🧪 Methodology: The 'Digital Twin'")
     st.markdown("""
-    We stress-tested the 2030 grid using a "Digital Twin" approach:
+    The 2030 energy demand forecast was stress tested using a "Digital Twin" approach:
     
     1.  **Weather Pattern:** 2025 demand and settlement data (Elexon) was used to identify the worst 7-day "cold and calm" window.
     2.  **Future Scaling:** **NESO FES 2030** and **CP30 Action Plan** targets were used to scale the wind and solar capacity.
