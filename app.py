@@ -196,7 +196,7 @@ with col4:
 
 # --- 5. The "Merit Order" Chart (Stacked Area) ---
 with tab_gap:
-    st.subheader("🔎 The Anatomy of a Shortfall")
+    st.subheader("🔎 Mind The Gap")
     st.markdown("""
     This chart visualizes the **Dispatch Stack** (Merit Order). 
     * **Bottom (Green/Blue):** Must-run renewables and nuclear.
@@ -295,9 +295,9 @@ with tab_method:
     st.markdown("""
     We stress-tested the 2030 grid using a "Digital Twin" approach:
     
-    1.  **Weather Pattern:** We utilized historic 2025 demand and settlement data (Elexon) to identify the worst 7-day "cold and calm" window.
-    2.  **Future Scaling:** We applied **NESO FES 2030** and **CP30 Action Plan** targets to scale the wind and solar capacity.
-    3.  **Dispatch Engine:** A custom Python engine calculated the net deficit half-hour by half-hour, prioritizing:
+    1.  **Weather Pattern:** 2025 demand and settlement data (Elexon) was used to identify the worst 7-day "cold and calm" window.
+    2.  **Future Scaling:** **NESO FES 2030** and **CP30 Action Plan** targets were used to scale the wind and solar capacity.
+    3.  **Dispatch Engine:** A custom Python engine (see [codebase](https://github.com/suni639/NESO-flexibility-gap) on GitHub) calculated the net deficit half-hour by half-hour, prioritising:
         * `Renewables (Zero Marginal Cost)`
         * `Nuclear (Baseload)`
         * `Battery Storage (Limited Duration)`
@@ -309,10 +309,10 @@ with tab_method:
 with tab_market:
     st.markdown("### 🏗️ Closing the Loop: Market Reform")
     st.markdown("""
-    Building hardware is only half the solution. To secure the grid, we need **Market Reform** to value flexibility correctly.
+    Building hardware is only half the solution. To secure the grid, **Market Reform** is needed to value flexibility correctly.
     
     #### 1. Locational Marginal Pricing (LMP)
-    * **Problem:** Currently, the UK has one national price. Batteries have no incentive to locate where the grid is weakest.
+    * **Problem:** Currently, the UK has one national price. There is limited incentive to locate batteries where the grid is weakest.
     * **Solution:** Zonal pricing would create high-price signals in the South and London, encouraging storage assets to be built where demand is highest.
     
     #### 2. REMA (Review of Electricity Market Arrangements)
