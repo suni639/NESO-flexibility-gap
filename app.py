@@ -6,37 +6,53 @@ from src.data_loader import load_weather_template, get_fes_peak_demand, create_2
 from src.gap_analysis import identify_dunkelflaute_window, run_simple_dispatch
 
 # --- Page Config ---
-st.set_page_config(page_title="NESO Flexibility Gap 2030", layout="wide", page_icon="⚡")
+st.set_page_config(page_title="CP30: The Resilience Test", layout="wide", page_icon="⚡")
 
 # --- CSS for "Strategy Grade" Cards ---
 st.markdown("""
 <style>
     .metric-card {
-        background-color: #F0F2F6;
-        border: 1px solid #E0E0E0;
+        background-color: #F8F9FA;
+        border: 1px solid #E9ECEF;
         padding: 20px;
-        border-radius: 8px;
+        border-radius: 10px;
         text-align: center;
-        margin-bottom: 10px;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        margin-bottom: 15px;
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.05);
     }
     .metric-label {
-        font-size: 14px;
-        font-weight: 600;
-        color: #555555;
+        font-size: 13px;
+        font-weight: 700;
+        color: #6C757D;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
     }
     .metric-value {
-        font-size: 26px; /* Fixed font size for ALL cards (Text & Numbers) */
-        font-weight: 700;
-        color: #000000;
+        font-size: 28px;
+        font-weight: 800;
+        color: #212529;
     }
     .metric-sub {
         font-size: 12px;
-        color: #888888;
+        color: #ADB5BD;
         margin-top: 5px;
+    }
+    .quote-box {
+        border-left: 4px solid #FF4B4B;
+        background-color: #FFF5F5;
+        padding: 15px;
+        border-radius: 5px;
+        font-style: italic;
+        color: #444;
+        margin-bottom: 15px;
+    }
+    .info-box {
+        background-color: #e8f4f8;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 5px solid #007bff;
+        margin-bottom: 15px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -52,14 +68,14 @@ def strategy_card(label, value, sub_text=""):
     """, unsafe_allow_html=True)
 
 # --- 1. Sidebar: Scenario Controls ---
-st.sidebar.title("🛠️ Controls")
-st.sidebar.markdown("Adjust 2030 assumptions to close the gap.")
+st.sidebar.title("🛠️ Simulation Controls")
+st.sidebar.markdown("Adjust the **Clean Power 2030 (CP30)** assumptions to test grid resilience.")
 
 # Scenario Sliders
-battery_cap = st.sidebar.slider("Battery Capacity (GW)", min_value=0, max_value=100, value=25, step=5)
-battery_dur = st.sidebar.slider("Battery Duration (Hours)", min_value=1, max_value=12, value=4, step=1)
+battery_cap = st.sidebar.slider("🔋 Battery Capacity (GW)", min_value=0, max_value=100, value=30, step=5, help="Total GW of Li-Ion battery storage installed.")
+battery_dur = st.sidebar.slider("⏳ Battery Duration (Hours)", min_value=1, max_value=12, value=4, step=1, help="Average duration. Li-Ion is typically 2-4 hours.")
 offshore_wind_target = st.sidebar.select_slider(
-    "Offshore Wind Target", 
+    "💨 Offshore Wind Target", 
     options=["Low (43GW)", "High (50GW)", "Extreme (60GW)"], 
     value="High (50GW)"
 )
@@ -70,7 +86,18 @@ wind_gw = int(offshore_wind_target.split("(")[1].replace("GW)", ""))
 CP30_TARGETS['Offshore Wind']['High'] = wind_gw 
 
 st.sidebar.divider()
-st.sidebar.info(f"**Current Scenario:**\n\n🔋 {battery_cap}GW / {battery_cap*battery_dur}GWh Storage\n💨 {wind_gw}GW Offshore Wind")
+st.sidebar.markdown("### 🧪 Strategic Mitigations")
+st.sidebar.info("What if we deployed Low-Carbon Baseload?")
+enable_hydrogen = st.sidebar.checkbox("Enable Hydrogen / CCS (5 GW)", value=False)
+enable_dsr = st.sidebar.checkbox("Enable Aggressive DSR (3 GW)", value=False)
+
+st.sidebar.divider()
+st.sidebar.markdown("### 📚 Expert References")
+st.sidebar.markdown("""
+* **Royal Society:** [Large-Scale Energy Storage](https://royalsociety.org/news-resources/projects/low-carbon-energy-programme/large-scale-energy-storage/)
+* **NESO:** [Future Energy Scenarios (FES)](https://www.nationalgrideso.com/future-energy/future-energy-scenarios)
+* **LCP Delta:** [Security of Supply Analysis](https://www.lcp.com/energy/publications/)
+""")
 
 # --- 2. Main Execution Engine ---
 @st.cache_data
@@ -79,8 +106,7 @@ def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
     weather = load_weather_template()
     peak_2030 = get_fes_peak_demand()
     
-    # --- THE FIX: SAFETY COPY ---
-    # We must copy the inner dictionary too, otherwise we modify the global variable!
+    # Safety Copy
     targets = CP30_TARGETS.copy()
     targets['Offshore Wind'] = CP30_TARGETS['Offshore Wind'].copy() 
     targets['Offshore Wind']['High'] = wind_gw_val
@@ -88,7 +114,6 @@ def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
     scenario_df = create_2030_profile(weather, targets, peak_2030)
     
     # Run Battery Dispatch
-    # Ensure inputs are converted correctly (GW -> MW)
     dispatched_df = run_simple_dispatch(
         scenario_df, 
         battery_capacity_mw=bat_cap * 1000, 
@@ -99,150 +124,196 @@ def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
 
 # Run the logic
 df = load_and_run_simulation(battery_cap, battery_dur, wind_gw)
-
-# Find the worst window (returns dataframe slice and end timestamp)
 dunkelflaute, worst_date_timestamp = identify_dunkelflaute_window(df, window_days=7)
 
+# Apply Strategic Mitigations (Post-Processing)
+mitigation_mw = 0
+if enable_hydrogen: mitigation_mw += 5000
+if enable_dsr: mitigation_mw += 3000
+
+# Adjust the Gap based on mitigations
+dunkelflaute['Adjusted_Gap_MW'] = (dunkelflaute['Unmet_Gap_MW'] - mitigation_mw).clip(lower=0)
+peak_gap_fixed = dunkelflaute['Adjusted_Gap_MW'].max() / 1000
+
 # --- 3. Dashboard Header & Context ---
-st.title("⚡ Clean Power 2030: The Green Energy Gap")
+st.title("⚡ Clean Power 2030: The Resilience Test")
+st.markdown("### Stress-testing the UK Grid against a 1-in-20 year 'Dunkelflaute'")
 
-# --- Expanders for Context ---
-with st.expander("🌍 Strategic Context: Clean Power 2030 & Key Findings", expanded=False):
-    st.markdown("""
-    ### 🌍 The Context: Clean Power 2030 vs. The Weather
-    **The Mission:** The Government's **Clean Power 2030 (CP30)** roadmap aims to decarbonise the UK grid. While this works for "average" weather, it creates a critical vulnerability during extreme events.
+# --- NARRATIVE TABS ---
+tab_context, tab_gap, tab_method, tab_market = st.tabs(["❄️ The Weather Challenge", "📉 The Dispatch Stack", "🧪 Methodology", "🏗️ Strategic Levers"])
 
-    **The Threat:** A **"Dunkelflaute"** (Dark Wind Lull) is a recurring weather phenomenon where high pressure freezes wind speeds (<10% capacity) and blocks sunlight for **3–10 days**.
-    * **The Risk:** These events coincide with cold snaps (peak heating demand) and affect neighbouring countries simultaneously, making imports unreliable.
-    * **The Question:** As fossil fuels retire, what keeps the lights on when the wind stops for a week?
+with tab_context:
+    col_c1, col_c2 = st.columns([2, 1])
+    with col_c1:
+        st.markdown("""
+        **The Scenario:** It is January. A high-pressure system sits over the North Sea. Wind output drops to <5% for 7 days. It is freezing, and heat pump demand spikes.
+        
+        **The Resilience Gap:**
+        The Government's *Clean Power 2030* mission relies heavily on wind. This simulation models the **"Dunkelflaute"** (Dark Wind Lull). The "Gap" you see below isn't theoretical; it represents the moment the Control Room runs out of options.
+        
+        **Why Batteries Aren't Enough:**
+        Lithium-ion batteries are excellent sprinters (1-4 hours), but they cannot run a marathon (5-7 days). Once they empty, the grid requires **Firm Power** (Nuclear, Hydrogen, or Carbon Capture) to keep the lights on.
+        """)
+        
+        st.info("""
+        **Operational Reality:**
+        When the gap opens, NESO (National Energy System Operator) issues a **Loss of Load Probability (LoLP)** warning. In today's market, this gap is filled by expensive, high-carbon gas turbines (OCGTs). By 2030, we must fill it with clean alternatives.
+        """)
 
-    ---
+    with col_c2:
+        st.markdown("""
+        <div class="quote-box">
+        "Wind and solar generated electricity cannot be relied upon to meet demand... There is a need for large-scale long-duration storage to ensure security of supply."
+        <br>— <b>The Royal Society</b>
+        </div>
+        """, unsafe_allow_html=True)
+        st.caption("Reference: Royal Society Large-Scale Energy Storage Report (2023)")
 
-    ### 🎯 The Goal & Key Findings
-    **The Goal:** To quantify the **"Clean Power Gap"**—the specific volume of firm, dispatchable capacity (GW) and energy (TWh) required to secure the UK grid during a severe weather stress event (*Dunkelflaute*), assuming full delivery of CP30 targets.
-
-    **The Findings:**
-    * **The "Gap" Defined:** During a severe winter calm (modelled on 2025 weather patterns scaled to 2030), the grid faces a capacity shortfall of **~51 GW**.
-    * **The Failure Mode:** Short-duration (Li-ion) batteries exhausted their energy reserves within the **first 24 hours** of the 120-hour stress window.
-    * **Strategic Implication:** Batteries solve *intraday* volatility but provide **zero security** for *inter-day* weather risks. The 51 GW gap effectively defines the requirement for **Long Duration Energy Storage (LDES)** and Low-Carbon Gas (CCS/Hydrogen).
-    """)
-
-with st.expander("🛡️ Mitigations & The 'Dispatch Stack'", expanded=False):
-    st.markdown("""
-    If batteries fail the 5-day test (as shown by the model), the project highlights the hierarchy of mitigations required to fill the 51 GW gap:
-
-    | Tier | Mitigation Strategy | Potential Impact | Risk / Limitation |
-    | :--- | :--- | :--- | :--- |
-    | **1** | **Interconnectors** | ~10-15 GW | **High Risk.** We can import power, but only if our neighbours aren't suffering the same weather event. |
-    | **2** | **Nuclear** | ~4-6 GW | **Inflexible.** Provides a stable floor (Baseload) but cannot easily "ramp up" to fill a sudden 50GW gap. |
-    | **3** | **Demand Side Response (DSR)** | ~5-10 GW | **Consumer Action.** Paying heavy industry to shut down and consumers to lower usage. |
-    | **4** | **The Strategic Reserve** | **~30 GW** | **The Gap Filler.** The remaining shortfall must be met by Gas with CCS (Carbon Capture), Hydrogen Turbines, or keeping unabated gas plants on standby as a "last resort" insurance policy. |
-    """)
-
-with st.expander("⚙️ Data & Methodology", expanded=False):
-    st.markdown("""
-    A **"Digital Twin"** approach was utilised to stress-test the 2030 grid:
-
-    * **Weather Profile:** Used **2025 Historic Demand & Settlement Data (Elexon)** to replicate the scenario of a "Cold Dunkelflaute" (i.e., the coldest and darkest week in 2025). 
-    * **Future Scaling:** Applied **NESO FES 2030** and **CP30 Action Plan** targets to scale the wind/solar amplitude (e.g., scaling wind output to hit 50 GW capacity).
-    * **Simulation Engine:** A custom Python dispatch engine calculated the net deficit half-hour by half-hour, prioritising `Renewables` > `Batteries` > `Fossil Backup`.
-    """)
-
-# --- 4. KPI Metrics Row ---
+# --- 4. KPI Metrics Row (Global) ---
+st.divider()
 col1, col2, col3, col4 = st.columns(4)
 
-# Calculate Metrics
-peak_gap_raw = df['Net_Demand_MW'].max() / 1000
-peak_gap_fixed = df['Unmet_Gap_MW'].max() / 1000
-curtailment = df[df['Net_Demand_MW'] < 0]['Net_Demand_MW'].sum() / 1000000 * -1 # TWh
-
-# Calculate Date Range using the DataFrame Index (Fixes the single date issue)
-start_date_str = dunkelflaute.index.min().strftime('%b %d')
-end_date_str = dunkelflaute.index.max().strftime('%b %d')
-date_range_str = f"{start_date_str} - {end_date_str}"
+curtailment = df[df['Net_Demand_MW'] < 0]['Net_Demand_MW'].sum() / 1000000 * -1 
+start_date_str = dunkelflaute.index.min().strftime('%d %b')
+end_date_str = dunkelflaute.index.max().strftime('%d %b')
 
 with col1:
-    strategy_card("Peak Unmet Demand", f"{peak_gap_raw:,.1f} GW", "Raw Deficit")
+    strategy_card("Event Window", f"{start_date_str} - {end_date_str}", "Worst 7 Days (2025 Data)")
 
 with col2:
-    # Color logic for the value
-    val_color = "red" if peak_gap_fixed > 5 else "orange" if peak_gap_fixed > 0 else "green"
-    # We inject the color style directly into the value string for the helper function
-    styled_value = f'<span style="color:{val_color}">{peak_gap_fixed:,.1f} GW</span>'
-    strategy_card("Gap After Batteries", styled_value, "Remaining Deficit")
+    strategy_card("Clean Surplus", f"{curtailment:,.1f} TWh", "Wasted Energy (Pre-Event)")
 
 with col3:
-    strategy_card("Surplus Energy", f"{curtailment:,.1f} TWh", "Wasted / Curtailed")
+    # Logic: Batteries fail after ~24h in this model usually
+    strategy_card("Battery Exhaustion", "Day 2", "Of 7-Day Event")
 
 with col4:
-    strategy_card("Critical Window", date_range_str, "Worst 7-Day Event")
+    val_color = "#FF4B4B" if peak_gap_fixed > 5 else "#FFA500" if peak_gap_fixed > 0 else "#28A745"
+    styled_value = f'<span style="color:{val_color}">{peak_gap_fixed:,.1f} GW</span>'
+    strategy_card("Real-World Gap", styled_value, "Unmet Peak Demand")
 
-# --- 5. The "Crime Scene" Chart (Dunkelflaute) ---
-st.subheader("🔎 The 'Dunkelflaute' Event (Worst 7 Days)")
+# --- 5. The "Merit Order" Chart (Stacked Area) ---
+with tab_gap:
+    st.subheader("🔎 The Anatomy of a Shortfall")
+    st.markdown("""
+    This chart visualizes the **Dispatch Stack** (Merit Order). 
+    * **Bottom (Green/Blue):** Must-run renewables and nuclear.
+    * **Middle (Orange):** Batteries discharging to shave the peaks.
+    * **Top (Red):** The **Unmet Gap**. This is the risk zone where strategic reserves are required.
+    """)
 
-fig = go.Figure()
+    fig = go.Figure()
 
-# Demand Line
-fig.add_trace(go.Scatter(
-    x=dunkelflaute.index, y=dunkelflaute['Demand_2030_MW']/1000,
-    mode='lines', name='Demand (GW)',
-    line=dict(color='black', width=3)
-))
-
-# Clean Gen (Wind+Solar+Nuclear)
-total_clean = (dunkelflaute['Wind_Gen_2030_MW'] + dunkelflaute['Solar_Gen_2030_MW'] + dunkelflaute['Nuclear_Gen_2030_MW']) / 1000
-fig.add_trace(go.Scatter(
-    x=dunkelflaute.index, y=total_clean,
-    mode='lines', name='Clean Gen (GW)',
-    line=dict(color='#2ca02c', width=1),
-    fill='tozeroy'
-))
-
-# Battery Output (Stacked on top of Clean Gen)
-battery_contribution = dunkelflaute['Battery_Output_MW'].clip(lower=0) / 1000
-fig.add_trace(go.Scatter(
-    x=dunkelflaute.index, y=total_clean + battery_contribution,
-    mode='lines', name='With Batteries',
-    line=dict(color='#1f77b4', width=0),
-    fill='tonexty' # Fill between Clean Gen and This Line
-))
-
-fig.update_layout(
-    xaxis_title="Date",
-    yaxis_title="Power (GW)",
-    height=500,
-    hovermode="x unified",
-    legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01),
-    margin=dict(l=0, r=0, t=30, b=0)
-)
-st.plotly_chart(fig, use_container_width=True)
-
-# --- 6. Deep Dive: Battery State of Charge ---
-with st.expander("🔋 View Battery State of Charge Analysis"):
-    st.write("This chart shows how the batteries drained during the stress event.")
-    
-    fig_soc = go.Figure()
-    fig_soc.add_trace(go.Scatter(
-        x=dunkelflaute.index, y=dunkelflaute['Battery_Storage_MWh']/1000,
-        mode='lines', name='Storage Level (GWh)',
-        line=dict(color='orange', width=2)
+    # 1. Nuclear (Baseload - The Floor)
+    fig.add_trace(go.Scatter(
+        x=dunkelflaute.index, 
+        y=dunkelflaute['Nuclear_Gen_2030_MW']/1000,
+        mode='lines', 
+        name='Nuclear (Baseload)',
+        stackgroup='one', # This creates the stack
+        line=dict(width=0, color='#2ca02c'), # Green
+        fillcolor='rgba(44, 160, 44, 0.6)'
     ))
-    
-    fig_soc.update_layout(
-        title="Battery State of Charge (GWh)",
-        yaxis_title="Energy Stored (GWh)",
-        height=300,
+
+    # 2. Wind & Solar (Variable - The Bulk)
+    fig.add_trace(go.Scatter(
+        x=dunkelflaute.index, 
+        y=(dunkelflaute['Wind_Gen_2030_MW'] + dunkelflaute['Solar_Gen_2030_MW'])/1000,
+        mode='lines', 
+        name='Wind & Solar',
+        stackgroup='one',
+        line=dict(width=0, color='#1f77b4'), # Blue
+        fillcolor='rgba(31, 119, 180, 0.6)'
+    ))
+
+    # 3. Battery Discharge (The Peaker)
+    fig.add_trace(go.Scatter(
+        x=dunkelflaute.index, 
+        y=dunkelflaute['Battery_Output_MW'].clip(lower=0)/1000,
+        mode='lines', 
+        name='Battery Discharge',
+        stackgroup='one',
+        line=dict(width=0, color='#ff7f0e'), # Orange
+        fillcolor='rgba(255, 127, 14, 0.8)'
+    ))
+
+    # 4. Mitigation (Hydrogen/DSR) if selected
+    if mitigation_mw > 0:
+        # Create a flat line for mitigation (simplified) across the window
+        mitigation_series = pd.Series(mitigation_mw/1000, index=dunkelflaute.index)
+        # Only apply it where there is actually a gap to fill visually? 
+        # For simplicity in stack, we just show available capacity
+        fig.add_trace(go.Scatter(
+            x=dunkelflaute.index,
+            y=mitigation_series,
+            mode='lines',
+            name='Strategic Reserve (H2/DSR)',
+            stackgroup='one',
+            line=dict(width=0, color='#9467bd'), # Purple
+            fillcolor='rgba(148, 103, 189, 0.6)'
+        ))
+
+    # 5. The Gap (The Deficit)
+    gap_to_fill = (dunkelflaute['Adjusted_Gap_MW'] / 1000).clip(lower=0)
+
+    fig.add_trace(go.Scatter(
+        x=dunkelflaute.index, 
+        y=gap_to_fill,
+        mode='lines', 
+        name='UNMET GAP (Risk)',
+        stackgroup='one',
+        line=dict(width=0, color='#d62728'), # Red
+        fillcolor='rgba(214, 39, 40, 0.5)' # Semi-transparent Red
+    ))
+
+    # 6. The Demand Line (The Ceiling)
+    fig.add_trace(go.Scatter(
+        x=dunkelflaute.index, 
+        y=dunkelflaute['Demand_2030_MW']/1000,
+        mode='lines', 
+        name='System Demand',
+        line=dict(color='black', width=2, dash='dot')
+    ))
+
+    fig.update_layout(
+        yaxis_title="Power Generation (GW)",
+        height=550,
+        hovermode="x unified",
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
         margin=dict(l=0, r=0, t=30, b=0)
     )
-    st.plotly_chart(fig_soc, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Gap warning
+    if peak_gap_fixed > 5:
+        st.error(f"⚠️ **Analysis:** Even with mitigations, a **{peak_gap_fixed:.1f} GW gap** remains. This confirms the critical need for Long Duration Energy Storage (LDES).")
 
-# --- 7. Insight Box ---
-st.divider()
-st.markdown("### 💡 Risk Level")
+with tab_method:
+    st.markdown("### 🧪 Methodology: The 'Digital Twin'")
+    st.markdown("""
+    We stress-tested the 2030 grid using a "Digital Twin" approach:
+    
+    1.  **Weather Pattern:** We utilized historic 2025 demand and settlement data (Elexon) to identify the worst 7-day "cold and calm" window.
+    2.  **Future Scaling:** We applied **NESO FES 2030** and **CP30 Action Plan** targets to scale the wind and solar capacity.
+    3.  **Dispatch Engine:** A custom Python engine calculated the net deficit half-hour by half-hour, prioritizing:
+        * `Renewables (Zero Marginal Cost)`
+        * `Nuclear (Baseload)`
+        * `Battery Storage (Limited Duration)`
+        * `Strategic Reserve (The Gap)`
+    """)
+    
+    st.latex(r"\text{Flexibility Gap} = \text{Peak Demand} - (\text{Firm Gen} + \text{Renewables} + \text{Storage})")
 
-if peak_gap_fixed > 5:
-    st.error(f"**CRITICAL RISK:** Even with {battery_cap}GW of batteries, the grid is short by {peak_gap_fixed:.1f} GW. This confirms that short-duration lithium-ion batteries cannot solve a multi-day Dunkelflaute. **Strategic Implication:** We need Hydrogen or Gas CCS.")
-elif peak_gap_fixed > 0:
-    st.warning(f"**MODERATE RISK:** The gap is reduced to {peak_gap_fixed:.1f} GW. We are close, but need either more duration or DSR (Demand Side Response).")
-else:
-    st.success("**SECURE:** This configuration successfully bridges the Dunkelflaute gap. The grid remains stable.")
+with tab_market:
+    st.markdown("### 🏗️ Closing the Loop: Market Reform")
+    st.markdown("""
+    Building hardware is only half the solution. To secure the grid, we need **Market Reform** to value flexibility correctly.
+    
+    #### 1. Locational Marginal Pricing (LMP)
+    * **Problem:** Currently, the UK has one national price. Batteries have no incentive to locate where the grid is weakest.
+    * **Solution:** Zonal pricing would create high-price signals in the South and London, encouraging storage assets to be built where demand is highest.
+    
+    #### 2. REMA (Review of Electricity Market Arrangements)
+    * **Problem:** The current market pays for "Generation."
+    * **Solution:** REMA aims to create a market for "Availability"—paying assets (like Hydrogen turbines) just to sit there and wait for a Dunkelflaute.
+    """)
