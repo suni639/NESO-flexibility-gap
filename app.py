@@ -253,7 +253,7 @@ with tab_context:
     col_c1, col_c2 = st.columns([2, 1])
     with col_c1:
         st.markdown("""
-        **The Scenario:** It is a cold, dark January. A high-pressure system sits over the North Sea. Wind output drops to <5% for 7 days. It is freezing, and heat pump demand spikes.
+        **The Scenario:** It's a cold, dark January. A high-pressure system sits over the North Sea. Wind output drops to <5% for 7 days. It's freezing, and heat pump demand spikes.
         
         **The Resilience Gap:**
         The Government's *Clean Power 2030* mission relies heavily on wind. This simulation models a **"Dunkelflaute"** event (German for "dark doldrums"), a prolonged period of low wind and minimal sunshine, severely limiting UK renewable energy production.
@@ -261,7 +261,7 @@ with tab_context:
         During a Dunkelflaute, wind/solar output can drop to near zero, as seen in recent events across Europe where wind provided only 3-4% of demand during peak times.
         
         **Why Batteries Aren't Enough:**
-        Lithium-ion batteries are excellent at covering short durations (1-4 hours), but they cannot support the grid for the prolonged periods (5-7 days) seen in Dunkelflaute events. Once they empty, the grid requires **Firm Power** (Nuclear, Hydrogen, or Carbon Capture) to keep the lights on.
+        Lithium-ion batteries are excellent at covering short durations (1-4 hours), but they cannot support the grid for the prolonged periods (5-7 days) seen in Dunkelflaute events. Once they empty, the grid requires **Firm Power** (Nuclear, Hydrogen, or gas) to keep the lights on.
         """)
         
         st.info("""
