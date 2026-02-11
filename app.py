@@ -6,7 +6,7 @@ from src.data_loader import load_weather_template, get_fes_peak_demand, create_2
 from src.gap_analysis import identify_dunkelflaute_window, run_simple_dispatch
 
 # --- Page Config ---
-st.set_page_config(page_title="CP30: The Renewable Energy Resilience Test", layout="wide", page_icon="⚡")
+st.set_page_config(page_title="CP30: The Resilience Test", layout="wide", page_icon="⚡")
 
 # --- CSS for "Strategy Grade" Cards ---
 st.markdown("""
@@ -47,12 +47,10 @@ st.markdown("""
         color: #444;
         margin-bottom: 15px;
     }
-    .info-box {
-        background-color: #e8f4f8;
-        padding: 15px;
-        border-radius: 8px;
-        border-left: 5px solid #007bff;
-        margin-bottom: 15px;
+    /* Compact Sidebar (Added to fulfil 'remove spaces' request) */
+    section[data-testid="stSidebar"] .block-container {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -67,29 +65,25 @@ def strategy_card(label, value, sub_text=""):
     </div>
     """, unsafe_allow_html=True)
 
-# --- 1. Sidebar: Scenario Controls ---
-st.sidebar.title("🛠️ Simulation Controls")
-st.sidebar.markdown("Adjust the **Clean Power 2030 (CP30)** assumptions to test grid resilience.")
+# --- 1. Sidebar: Scenario Controls (Compacted) ---
+st.sidebar.header("🛠️ Controls")
 
 # Scenario Sliders
-battery_cap = st.sidebar.slider("🔋 Battery Capacity (GW)", min_value=0, max_value=100, value=30, step=5, help="Total GW of Li-Ion battery storage installed.")
-battery_dur = st.sidebar.slider("⏳ Battery Duration (Hours)", min_value=1, max_value=12, value=4, step=1, help="Average duration. Li-Ion is typically 2-4 hours.")
+battery_cap = st.sidebar.slider("🔋 Battery Capacity (GW)", 0, 100, 30, 5)
+battery_dur = st.sidebar.slider("⏳ Battery Duration (Hours)", 1, 12, 4, 1)
 offshore_wind_target = st.sidebar.select_slider(
     "💨 Offshore Wind Target", 
     options=["Low (43GW)", "High (50GW)", "Extreme (60GW)"], 
     value="High (50GW)"
 )
 
-# Parse the slider text back to numbers
+# Parse sliders
 wind_gw = int(offshore_wind_target.split("(")[1].replace("GW)", ""))
-# Hack: Update the target dynamically for the simulation
 CP30_TARGETS['Offshore Wind']['High'] = wind_gw 
 
-st.sidebar.divider()
-st.sidebar.markdown("### 🧪 Strategic Mitigations")
-st.sidebar.info("What if we deployed Low-Carbon Baseload?")
-enable_hydrogen = st.sidebar.checkbox("Enable Hydrogen / CCS (5 GW)", value=False)
-enable_dsr = st.sidebar.checkbox("Enable Aggressive DSR (3 GW)", value=False)
+st.sidebar.subheader("🧪 Mitigations")
+enable_hydrogen = st.sidebar.checkbox("Hydrogen / CCS (5 GW)", value=False)
+enable_dsr = st.sidebar.checkbox("Aggressive DSR (3 GW)", value=False)
 
 # --- 2. Main Execution Engine ---
 @st.cache_data
@@ -118,12 +112,12 @@ def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
 df = load_and_run_simulation(battery_cap, battery_dur, wind_gw)
 dunkelflaute, worst_date_timestamp = identify_dunkelflaute_window(df, window_days=7)
 
-# Apply Strategic Mitigations (Post-Processing)
+# Apply Strategic Mitigations
 mitigation_mw = 0
 if enable_hydrogen: mitigation_mw += 5000
 if enable_dsr: mitigation_mw += 3000
 
-# Adjust the Gap based on mitigations
+# Adjust the Gap
 dunkelflaute['Adjusted_Gap_MW'] = (dunkelflaute['Unmet_Gap_MW'] - mitigation_mw).clip(lower=0)
 peak_gap_fixed = dunkelflaute['Adjusted_Gap_MW'].max() / 1000
 
@@ -131,7 +125,92 @@ peak_gap_fixed = dunkelflaute['Adjusted_Gap_MW'].max() / 1000
 st.title("⚡ Clean Power 2030: The Resilience Test")
 st.markdown("### Stress-testing the UK Grid against 'Dunkelflaute' severe weather events")
 
-# --- 4. KPI Metrics Row (Moved to Top) ---
+# --- 4. TABS (Restored to Top) ---
+tab_context, tab_method, tab_market, tab_refs = st.tabs(["❄️ The Weather Challenge", "🧪 Methodology", "🏗️ Strategic Levers", "📚 References"])
+
+with tab_context:
+    col_c1, col_c2 = st.columns([2, 1])
+    with col_c1:
+        st.markdown("""
+        **The Scenario:** It is a cold, dark January. A high-pressure system sits over the North Sea. Wind output drops to <5% for 7 days. It is freezing, and heat pump demand spikes.
+        
+        **The Resilience Gap:**
+        The Government's *Clean Power 2030* mission relies heavily on wind. This simulation models a **"Dunkelflaute"** event (German for "dark doldrums"), a prolonged period of low wind and minimal sunshine, severely limiting UK renewable energy production.
+                    
+        During a Dunkelflaute, wind/solar output can drop to near zero, as seen in recent events across Europe where wind provided only 3-4% of demand during peak times.
+        
+        **Why Batteries Aren't Enough:**
+        Lithium-ion batteries are excellent at covering short durations (1-4 hours), but they cannot support the grid for the prolonged periods (5-7 days) seen in Dunkelflaute events. Once they empty, the grid requires **Firm Power** (Nuclear, Hydrogen, or Carbon Capture) to keep the lights on.
+        """)
+        
+        st.info("""
+        **Operational Reality:**
+        When the gap opens (i.e. supply cannot meet demand), NESO (National Energy System Operator) issues a **Loss of Load Probability (LoLP)** warning. In today's market, this gap is filled by expensive, high-carbon gas turbines (OCGTs). By 2030, the national objective is to fill it with clean alternatives; however, the question is whether the planned capacity will be sufficient to prevent blackouts during extreme weather events.
+        """)
+
+    with col_c2:
+        st.markdown("""
+        <div class="quote-box">
+        "Wind and solar generated electricity cannot be relied upon to meet demand... There is a need for large-scale long-duration storage to ensure security of supply."
+        <br>— <b>The Royal Society</b>
+        </div>
+        """, unsafe_allow_html=True)
+        st.caption("Reference: Royal Society Large-Scale Energy Storage Report (2023)")
+
+with tab_method:
+    st.markdown("### 🧪 Methodology: The 'Digital Twin'")
+    st.markdown("""
+    We stress-tested the 2030 grid using a "Digital Twin" approach:
+    
+    1.  **Weather Pattern:** 2025 demand and settlement data (Elexon) was utilised to identify the worst 7-day "cold and calm" window.
+    2.  **Future Scaling:** **NESO FES 2030** and **CP30 Action Plan** targets were utilised to scale the wind and solar capacity.
+    3.  **Dispatch Engine:** A custom Python engine (see codebase link in References) calculated the net deficit half-hour by half-hour, prioritising:
+        * `Renewables (Zero Marginal Cost)`
+        * `Nuclear (Baseload)`
+        * `Battery Storage (Limited Duration)`
+        * `Strategic Reserve (The Gap)`
+    """)
+    
+    st.latex(r"\text{Flexibility Gap} = \text{Peak Demand} - (\text{Firm Gen} + \text{Renewables} + \text{Storage})")
+
+with tab_market:
+    st.markdown("### 🏗️ Closing the Loop: Market Reform")
+    st.markdown("""
+    Building hardware is only half the solution. To secure the grid, **Market Reform** is needed to value flexibility correctly.
+    
+    #### 1. Locational Marginal Pricing (LMP)
+    * **Problem:** Currently, the UK has one national price. There is limited incentive to locate batteries where the grid is weakest.
+    * **Solution:** Zonal pricing would create high-price signals in the South and London, encouraging storage assets to be built where demand is highest.
+    
+    #### 2. REMA (Review of Electricity Market Arrangements)
+    * **Problem:** The current market pays for "Generation."
+    * **Solution:** REMA aims to create a market for "Availability"—paying assets (like Hydrogen turbines) just to sit there and wait for a Dunkelflaute.
+    """)
+
+with tab_refs:
+    st.markdown("### 📚 References & Resources")
+    st.markdown("Sources used to build this stress-test model and define the strategic context:")
+    
+    col_ref1, col_ref2 = st.columns(2)
+    
+    with col_ref1:
+        st.markdown("#### Industry Reports")
+        st.markdown("""
+        * **The Royal Society:** [Large-Scale Energy Storage](https://royalsociety.org/news-resources/projects/low-carbon-energy-programme/large-scale-electricity-storage/)
+        * **NESO (National Energy System Operator):** [Future Energy Scenarios (FES)](https://www.neso.energy/publications/future-energy-scenarios-fes)
+        * **Wood Mackenzie:** [Critical Risks of "Dunkelflaute"](https://www.woodmac.com/press-releases/wood-mackenzie-study-reveals-critical-risks-of-europes-dunkelflaute-renewable-energy-droughts/)
+        * **LCP Delta:** [Security of Supply Analysis](https://www.lcp.com/energy/publications/)
+        """)
+        
+    with col_ref2:
+        st.markdown("#### Project Codebase")
+        st.markdown("""
+        The full simulation engine, dispatch logic, and data loaders are open-source.
+        
+        * 💻 **GitHub Repository:** [suni639/NESO-flexibility-gap](https://github.com/suni639/NESO-flexibility-gap)
+        """)
+
+# --- 5. KPI Metrics Row ---
 st.divider()
 col1, col2, col3, col4 = st.columns(4)
 
@@ -146,7 +225,6 @@ with col2:
     strategy_card("Clean Surplus", f"{curtailment:,.1f} TWh", "Wasted Energy (Pre-Event)")
 
 with col3:
-    # Logic: Batteries fail after ~24h in this model usually
     strategy_card("Battery Exhaustion", "Day 2", "Of 7-Day Event")
 
 with col4:
@@ -154,16 +232,9 @@ with col4:
     styled_value = f'<span style="color:{val_color}">{peak_gap_fixed:,.1f} GW</span>'
     strategy_card("Real-World Gap", styled_value, "Unmet Peak Demand")
 
-# --- 5. The "Merit Order" Chart (Stacked Area) ---
-# Moved out of tabs and placed below KPIs
+# --- 6. The "Merit Order" Chart (Stacked Area) ---
 st.divider()
-st.subheader("🔎 Mind The Gap: The Dispatch Stack")
-st.markdown("""
-The chart below visualizes the **Merit Order** (supply stack) during the stress event.
-* **Bottom (Green/Blue):** Must-run Renewables and Nuclear.
-* **Middle (Orange):** Batteries discharging to shave peaks (note how they empty quickly).
-* **Top (Red):** The **Unmet Gap**. This is the risk zone where strategic reserves are required.
-""")
+st.subheader("🔎 The Dispatch Stack")
 
 
 
@@ -175,7 +246,7 @@ fig.add_trace(go.Scatter(
     y=dunkelflaute['Nuclear_Gen_2030_MW']/1000,
     mode='lines', 
     name='Nuclear (Baseload)',
-    stackgroup='one', # This creates the stack
+    stackgroup='one', 
     line=dict(width=0, color='#2ca02c'), # Green
     fillcolor='rgba(44, 160, 44, 0.6)'
 ))
@@ -246,94 +317,14 @@ fig.update_layout(
 )
 st.plotly_chart(fig, use_container_width=True)
 
-# Gap warning
+# --- 7. Mind The Gap Analysis (Moved Beneath Chart) ---
+st.markdown("### 📝 Mind The Gap")
+st.markdown("""
+The chart above visualises the **Merit Order** (supply stack) during the stress event.
+* **Bottom (Green/Blue):** Must-run Renewables and Nuclear.
+* **Middle (Orange):** Batteries discharging to shave peaks (note how they empty quickly).
+* **Top (Red):** The **Unmet Gap**. This is the risk zone where strategic reserves are required.
+""")
+
 if peak_gap_fixed > 5:
     st.error(f"⚠️ **Analysis:** Even with mitigations, a **{peak_gap_fixed:.1f} GW gap** remains. This confirms the critical need for Long Duration Energy Storage (LDES).")
-
-
-# --- 6. Detailed Tabs ---
-st.divider()
-# Updated tabs list: Moved Graph out, Added References
-tab_context, tab_method, tab_market, tab_refs = st.tabs(["❄️ The Weather Challenge", "🧪 Methodology", "🏗️ Strategic Levers", "📚 References"])
-
-with tab_context:
-    col_c1, col_c2 = st.columns([2, 1])
-    with col_c1:
-        st.markdown("""
-        **The Scenario:** It's a cold, dark January. A high-pressure system sits over the North Sea. Wind output drops to <5% for 7 days. It's freezing, and heat pump demand spikes.
-        
-        **The Resilience Gap:**
-        The Government's *Clean Power 2030* mission relies heavily on wind. This simulation models a **"Dunkelflaute"** event, German for "dark doldrums", or prolonged periods of low wind and minimal sunshine, severely limiting UK renewable energy production.
-                    
-        During a Dunkelflaute, wind/solar output can drop to near zero, as seen in recent events across Europe where wind provided only 3-4% of demand during peak times
-        
-        **Why Batteries Aren't Enough:**
-        Lithium-ion batteries are excellent to cover short durations (1-4 hours), but they cannot support the grid for prolonged periods (5-7 days) seen in Dunkelflaute events. Once they empty, the grid requires **Firm Power** (Nuclear, Hydrogen, or Carbon Capture) to keep the lights on.
-        """)
-        
-        st.info("""
-        **Operational Reality:**
-        When the gap opens (i.e. supply cannot meet demand), NESO (National Energy System Operator) issues a **Loss of Load Probability (LoLP)** warning. In today's market, this gap is filled by expensive, high-carbon gas turbines (OCGTs). By 2030, the national objective is to fill it with clean alternatives, however the question is whether the planned capacity will be sufficient to prevent blackouts during extreme weather events.
-        """)
-
-    with col_c2:
-        st.markdown("""
-        <div class="quote-box">
-        "Wind and solar generated electricity cannot be relied upon to meet demand... There is a need for large-scale long-duration storage to ensure security of supply."
-        <br>— <b>The Royal Society</b>
-        </div>
-        """, unsafe_allow_html=True)
-        st.caption("Reference: Royal Society Large-Scale Energy Storage Report (2023)")
-
-with tab_method:
-    st.markdown("### 🧪 Methodology: The 'Digital Twin'")
-    st.markdown("""
-    We stress-tested the 2030 grid using a "Digital Twin" approach:
-    
-    1.  **Weather Pattern:** 2025 demand and settlement data (Elexon) was used to identify the worst 7-day "cold and calm" window.
-    2.  **Future Scaling:** **NESO FES 2030** and **CP30 Action Plan** targets were used to scale the wind and solar capacity.
-    3.  **Dispatch Engine:** A custom Python engine (see codebase link in References) calculated the net deficit half-hour by half-hour, prioritising:
-        * `Renewables (Zero Marginal Cost)`
-        * `Nuclear (Baseload)`
-        * `Battery Storage (Limited Duration)`
-        * `Strategic Reserve (The Gap)`
-    """)
-    
-    st.latex(r"\text{Flexibility Gap} = \text{Peak Demand} - (\text{Firm Gen} + \text{Renewables} + \text{Storage})")
-
-with tab_market:
-    st.markdown("### 🏗️ Closing the Loop: Market Reform")
-    st.markdown("""
-    Building hardware is only half the solution. To secure the grid, **Market Reform** is needed to value flexibility correctly.
-    
-    #### 1. Locational Marginal Pricing (LMP)
-    * **Problem:** Currently, the UK has one national price. There is limited incentive to locate batteries where the grid is weakest.
-    * **Solution:** Zonal pricing would create high-price signals in the South and London, encouraging storage assets to be built where demand is highest.
-    
-    #### 2. REMA (Review of Electricity Market Arrangements)
-    * **Problem:** The current market pays for "Generation."
-    * **Solution:** REMA aims to create a market for "Availability"—paying assets (like Hydrogen turbines) just to sit there and wait for a Dunkelflaute.
-    """)
-
-with tab_refs:
-    st.markdown("### 📚 References & Resources")
-    st.markdown("Sources used to build this stress-test model and define the strategic context:")
-    
-    col_ref1, col_ref2 = st.columns(2)
-    
-    with col_ref1:
-        st.markdown("#### Industry Reports")
-        st.markdown("""
-        * **The Royal Society:** [Large-Scale Energy Storage](https://royalsociety.org/news-resources/projects/low-carbon-energy-programme/large-scale-electricity-storage/)
-        * **NESO (National Energy System Operator):** [Future Energy Scenarios (FES)](https://www.neso.energy/publications/future-energy-scenarios-fes)
-        * **Wood Mackenzie:** [Critical Risks of "Dunkelflaute"](https://www.woodmac.com/press-releases/wood-mackenzie-study-reveals-critical-risks-of-europes-dunkelflaute-renewable-energy-droughts/)
-        * **LCP Delta:** [Security of Supply Analysis](https://www.lcp.com/energy/publications/)
-        """)
-        
-    with col_ref2:
-        st.markdown("#### Project Codebase")
-        st.markdown("""
-        The full simulation engine, dispatch logic, and data loaders are open-source.
-        
-        * 💻 **GitHub Repository:** [suni639/NESO-flexibility-gap](https://github.com/suni639/NESO-flexibility-gap)
-        """)
