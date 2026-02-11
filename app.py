@@ -6,7 +6,7 @@ from src.data_loader import load_weather_template, get_fes_peak_demand, create_2
 from src.gap_analysis import identify_dunkelflaute_window, run_simple_dispatch
 
 # --- Page Config ---
-st.set_page_config(page_title="CP30: The Resilience Test", layout="wide", page_icon="⚡")
+st.set_page_config(page_title="CP30: The Renewable Energy Resilience Test", layout="wide", page_icon="⚡")
 
 # --- CSS for "Strategy Grade" Cards ---
 st.markdown("""
@@ -92,11 +92,11 @@ enable_hydrogen = st.sidebar.checkbox("Enable Hydrogen / CCS (5 GW)", value=Fals
 enable_dsr = st.sidebar.checkbox("Enable Aggressive DSR (3 GW)", value=False)
 
 st.sidebar.divider()
-st.sidebar.markdown("### 📚 Expert References")
+st.sidebar.markdown("### 📚 References")
 st.sidebar.markdown("""
-* **Royal Society:** [Large-Scale Energy Storage](https://royalsociety.org/news-resources/projects/low-carbon-energy-programme/large-scale-energy-storage/)
-* **NESO:** [Future Energy Scenarios (FES)](https://www.nationalgrideso.com/future-energy/future-energy-scenarios)
-* **LCP Delta:** [Security of Supply Analysis](https://www.lcp.com/energy/publications/)
+* **Royal Society:** [Large-Scale Energy Storage](https://royalsociety.org/news-resources/projects/low-carbon-energy-programme/large-scale-electricity-storage/)
+* **NESO:** [Future Energy Scenarios (FES)](https://www.neso.energy/publications/future-energy-scenarios-fes)
+* **Wood Mackenzie:** [Critical Risks of Europe's "Dunkelflaute" Renewable Energy Droughts](https://www.woodmac.com/press-releases/wood-mackenzie-study-reveals-critical-risks-of-europes-dunkelflaute-renewable-energy-droughts/)
 """)
 
 # --- 2. Main Execution Engine ---
@@ -137,7 +137,7 @@ peak_gap_fixed = dunkelflaute['Adjusted_Gap_MW'].max() / 1000
 
 # --- 3. Dashboard Header & Context ---
 st.title("⚡ Clean Power 2030: The Resilience Test")
-st.markdown("### Stress-testing the UK Grid against a 1-in-20 year 'Dunkelflaute'")
+st.markdown("### Stress-testing the UK Grid against 'Dunkelflaute' severe weather events")
 
 # --- NARRATIVE TABS ---
 tab_context, tab_gap, tab_method, tab_market = st.tabs(["❄️ The Weather Challenge", "📉 The Dispatch Stack", "🧪 Methodology", "🏗️ Strategic Levers"])
@@ -146,18 +146,20 @@ with tab_context:
     col_c1, col_c2 = st.columns([2, 1])
     with col_c1:
         st.markdown("""
-        **The Scenario:** It is January. A high-pressure system sits over the North Sea. Wind output drops to <5% for 7 days. It is freezing, and heat pump demand spikes.
+        **The Scenario:** It's a cold, dark January. A high-pressure system sits over the North Sea. Wind output drops to <5% for 7 days. It's freezing, and heat pump demand spikes.
         
         **The Resilience Gap:**
-        The Government's *Clean Power 2030* mission relies heavily on wind. This simulation models the **"Dunkelflaute"** (Dark Wind Lull). The "Gap" you see below isn't theoretical; it represents the moment the Control Room runs out of options.
+        The Government's *Clean Power 2030* mission relies heavily on wind. This simulation models a **"Dunkelflaute"** event, German for "dark doldrums", or prolonged periods of low wind and minimal sunshine, severely limiting UK renewable energy production.
+                    
+        During a Dunkelflaute, wind/solar output can drop to near zero, as seen in recent events across Europe where wind provided only 3-4% of demand during peak times
         
         **Why Batteries Aren't Enough:**
-        Lithium-ion batteries are excellent sprinters (1-4 hours), but they cannot run a marathon (5-7 days). Once they empty, the grid requires **Firm Power** (Nuclear, Hydrogen, or Carbon Capture) to keep the lights on.
+        Lithium-ion batteries are excellent to cover short durations (1-4 hours), but they cannot support the grid for prolonged periods (5-7 days) seen in Dunkelflaute events. Once they empty, the grid requires **Firm Power** (Nuclear, Hydrogen, or Carbon Capture) to keep the lights on.
         """)
         
         st.info("""
         **Operational Reality:**
-        When the gap opens, NESO (National Energy System Operator) issues a **Loss of Load Probability (LoLP)** warning. In today's market, this gap is filled by expensive, high-carbon gas turbines (OCGTs). By 2030, we must fill it with clean alternatives.
+        When the gap opens (i.e. supply cannot meet demand), NESO (National Energy System Operator) issues a **Loss of Load Probability (LoLP)** warning. In today's market, this gap is filled by expensive, high-carbon gas turbines (OCGTs). By 2030, the national objective is to fill it with clean alternatives, however the question is whether the planned capacity will be sufficient to prevent blackouts during extreme weather events.
         """)
 
     with col_c2:
