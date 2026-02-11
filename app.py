@@ -91,14 +91,6 @@ st.sidebar.info("What if we deployed Low-Carbon Baseload?")
 enable_hydrogen = st.sidebar.checkbox("Enable Hydrogen / CCS (5 GW)", value=False)
 enable_dsr = st.sidebar.checkbox("Enable Aggressive DSR (3 GW)", value=False)
 
-st.sidebar.divider()
-st.sidebar.markdown("### 📚 References")
-st.sidebar.markdown("""
-* **Royal Society:** [Large-Scale Energy Storage](https://royalsociety.org/news-resources/projects/low-carbon-energy-programme/large-scale-electricity-storage/)
-* **NESO:** [Future Energy Scenarios (FES)](https://www.neso.energy/publications/future-energy-scenarios-fes)
-* **Wood Mackenzie:** [Critical Risks of Europe's "Dunkelflaute" Renewable Energy Droughts](https://www.woodmac.com/press-releases/wood-mackenzie-study-reveals-critical-risks-of-europes-dunkelflaute-renewable-energy-droughts/)
-""")
-
 # --- 2. Main Execution Engine ---
 @st.cache_data
 def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
@@ -135,12 +127,134 @@ if enable_dsr: mitigation_mw += 3000
 dunkelflaute['Adjusted_Gap_MW'] = (dunkelflaute['Unmet_Gap_MW'] - mitigation_mw).clip(lower=0)
 peak_gap_fixed = dunkelflaute['Adjusted_Gap_MW'].max() / 1000
 
-# --- 3. Dashboard Header & Context ---
+# --- 3. Dashboard Header ---
 st.title("⚡ Clean Power 2030: The Resilience Test")
 st.markdown("### Stress-testing the UK Grid against 'Dunkelflaute' severe weather events")
 
-# --- NARRATIVE TABS ---
-tab_context, tab_gap, tab_method, tab_market = st.tabs(["❄️ The Weather Challenge", "📉 The Dispatch Stack", "🧪 Methodology", "🏗️ Strategic Levers"])
+# --- 4. KPI Metrics Row (Moved to Top) ---
+st.divider()
+col1, col2, col3, col4 = st.columns(4)
+
+curtailment = df[df['Net_Demand_MW'] < 0]['Net_Demand_MW'].sum() / 1000000 * -1 
+start_date_str = dunkelflaute.index.min().strftime('%d %b')
+end_date_str = dunkelflaute.index.max().strftime('%d %b')
+
+with col1:
+    strategy_card("Event Window", f"{start_date_str} - {end_date_str}", "Worst 7 Days (2025 Data)")
+
+with col2:
+    strategy_card("Clean Surplus", f"{curtailment:,.1f} TWh", "Wasted Energy (Pre-Event)")
+
+with col3:
+    # Logic: Batteries fail after ~24h in this model usually
+    strategy_card("Battery Exhaustion", "Day 2", "Of 7-Day Event")
+
+with col4:
+    val_color = "#FF4B4B" if peak_gap_fixed > 5 else "#FFA500" if peak_gap_fixed > 0 else "#28A745"
+    styled_value = f'<span style="color:{val_color}">{peak_gap_fixed:,.1f} GW</span>'
+    strategy_card("Real-World Gap", styled_value, "Unmet Peak Demand")
+
+# --- 5. The "Merit Order" Chart (Stacked Area) ---
+# Moved out of tabs and placed below KPIs
+st.divider()
+st.subheader("🔎 Mind The Gap: The Dispatch Stack")
+st.markdown("""
+The chart below visualizes the **Merit Order** (supply stack) during the stress event.
+* **Bottom (Green/Blue):** Must-run Renewables and Nuclear.
+* **Middle (Orange):** Batteries discharging to shave peaks (note how they empty quickly).
+* **Top (Red):** The **Unmet Gap**. This is the risk zone where strategic reserves are required.
+""")
+
+
+
+fig = go.Figure()
+
+# 1. Nuclear (Baseload - The Floor)
+fig.add_trace(go.Scatter(
+    x=dunkelflaute.index, 
+    y=dunkelflaute['Nuclear_Gen_2030_MW']/1000,
+    mode='lines', 
+    name='Nuclear (Baseload)',
+    stackgroup='one', # This creates the stack
+    line=dict(width=0, color='#2ca02c'), # Green
+    fillcolor='rgba(44, 160, 44, 0.6)'
+))
+
+# 2. Wind & Solar (Variable - The Bulk)
+fig.add_trace(go.Scatter(
+    x=dunkelflaute.index, 
+    y=(dunkelflaute['Wind_Gen_2030_MW'] + dunkelflaute['Solar_Gen_2030_MW'])/1000,
+    mode='lines', 
+    name='Wind & Solar',
+    stackgroup='one',
+    line=dict(width=0, color='#1f77b4'), # Blue
+    fillcolor='rgba(31, 119, 180, 0.6)'
+))
+
+# 3. Battery Discharge (The Peaker)
+fig.add_trace(go.Scatter(
+    x=dunkelflaute.index, 
+    y=dunkelflaute['Battery_Output_MW'].clip(lower=0)/1000,
+    mode='lines', 
+    name='Battery Discharge',
+    stackgroup='one',
+    line=dict(width=0, color='#ff7f0e'), # Orange
+    fillcolor='rgba(255, 127, 14, 0.8)'
+))
+
+# 4. Mitigation (Hydrogen/DSR) if selected
+if mitigation_mw > 0:
+    mitigation_series = pd.Series(mitigation_mw/1000, index=dunkelflaute.index)
+    fig.add_trace(go.Scatter(
+        x=dunkelflaute.index,
+        y=mitigation_series,
+        mode='lines',
+        name='Strategic Reserve (H2/DSR)',
+        stackgroup='one',
+        line=dict(width=0, color='#9467bd'), # Purple
+        fillcolor='rgba(148, 103, 189, 0.6)'
+    ))
+
+# 5. The Gap (The Deficit)
+gap_to_fill = (dunkelflaute['Adjusted_Gap_MW'] / 1000).clip(lower=0)
+
+fig.add_trace(go.Scatter(
+    x=dunkelflaute.index, 
+    y=gap_to_fill,
+    mode='lines', 
+    name='UNMET GAP (Risk)',
+    stackgroup='one',
+    line=dict(width=0, color='#d62728'), # Red
+    fillcolor='rgba(214, 39, 40, 0.5)' # Semi-transparent Red
+))
+
+# 6. The Demand Line (The Ceiling)
+fig.add_trace(go.Scatter(
+    x=dunkelflaute.index, 
+    y=dunkelflaute['Demand_2030_MW']/1000,
+    mode='lines', 
+    name='System Demand',
+    line=dict(color='black', width=2, dash='dot')
+))
+
+fig.update_layout(
+    yaxis_title="Power Generation (GW)",
+    height=550,
+    hovermode="x unified",
+    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+    margin=dict(l=0, r=0, t=30, b=0)
+)
+st.plotly_chart(fig, use_container_width=True)
+
+# Gap warning
+if peak_gap_fixed > 5:
+    st.error(f"⚠️ **Analysis:** Even with mitigations, a **{peak_gap_fixed:.1f} GW gap** remains. This confirms the critical need for Long Duration Energy Storage (LDES).")
+
+
+# --- 6. Detailed Tabs ---
+st.divider()
+# Updated tabs list: Moved Graph out, Added References
+tab_context, tab_method, tab_market, tab_refs = st.tabs(["❄️ The Weather Challenge", "🧪 Methodology", "🏗️ Strategic Levers", "📚 References"])
 
 with tab_context:
     col_c1, col_c2 = st.columns([2, 1])
@@ -171,125 +285,6 @@ with tab_context:
         """, unsafe_allow_html=True)
         st.caption("Reference: Royal Society Large-Scale Energy Storage Report (2023)")
 
-# --- 4. KPI Metrics Row (Global) ---
-st.divider()
-col1, col2, col3, col4 = st.columns(4)
-
-curtailment = df[df['Net_Demand_MW'] < 0]['Net_Demand_MW'].sum() / 1000000 * -1 
-start_date_str = dunkelflaute.index.min().strftime('%d %b')
-end_date_str = dunkelflaute.index.max().strftime('%d %b')
-
-with col1:
-    strategy_card("Event Window", f"{start_date_str} - {end_date_str}", "Worst 7 Days (2025 Data)")
-
-with col2:
-    strategy_card("Clean Surplus", f"{curtailment:,.1f} TWh", "Wasted Energy (Pre-Event)")
-
-with col3:
-    # Logic: Batteries fail after ~24h in this model usually
-    strategy_card("Battery Exhaustion", "Day 2", "Of 7-Day Event")
-
-with col4:
-    val_color = "#FF4B4B" if peak_gap_fixed > 5 else "#FFA500" if peak_gap_fixed > 0 else "#28A745"
-    styled_value = f'<span style="color:{val_color}">{peak_gap_fixed:,.1f} GW</span>'
-    strategy_card("Real-World Gap", styled_value, "Unmet Peak Demand")
-
-# --- 5. The "Merit Order" Chart (Stacked Area) ---
-with tab_gap:
-    st.subheader("🔎 Mind The Gap")
-    st.markdown("""
-    This chart visualizes the **Dispatch Stack** (Merit Order). 
-    * **Bottom (Green/Blue):** Must-run renewables and nuclear.
-    * **Middle (Orange):** Batteries discharging to shave the peaks.
-    * **Top (Red):** The **Unmet Gap**. This is the risk zone where strategic reserves are required.
-    """)
-
-    fig = go.Figure()
-
-    # 1. Nuclear (Baseload - The Floor)
-    fig.add_trace(go.Scatter(
-        x=dunkelflaute.index, 
-        y=dunkelflaute['Nuclear_Gen_2030_MW']/1000,
-        mode='lines', 
-        name='Nuclear (Baseload)',
-        stackgroup='one', # This creates the stack
-        line=dict(width=0, color='#2ca02c'), # Green
-        fillcolor='rgba(44, 160, 44, 0.6)'
-    ))
-
-    # 2. Wind & Solar (Variable - The Bulk)
-    fig.add_trace(go.Scatter(
-        x=dunkelflaute.index, 
-        y=(dunkelflaute['Wind_Gen_2030_MW'] + dunkelflaute['Solar_Gen_2030_MW'])/1000,
-        mode='lines', 
-        name='Wind & Solar',
-        stackgroup='one',
-        line=dict(width=0, color='#1f77b4'), # Blue
-        fillcolor='rgba(31, 119, 180, 0.6)'
-    ))
-
-    # 3. Battery Discharge (The Peaker)
-    fig.add_trace(go.Scatter(
-        x=dunkelflaute.index, 
-        y=dunkelflaute['Battery_Output_MW'].clip(lower=0)/1000,
-        mode='lines', 
-        name='Battery Discharge',
-        stackgroup='one',
-        line=dict(width=0, color='#ff7f0e'), # Orange
-        fillcolor='rgba(255, 127, 14, 0.8)'
-    ))
-
-    # 4. Mitigation (Hydrogen/DSR) if selected
-    if mitigation_mw > 0:
-        # Create a flat line for mitigation (simplified) across the window
-        mitigation_series = pd.Series(mitigation_mw/1000, index=dunkelflaute.index)
-        # Only apply it where there is actually a gap to fill visually? 
-        # For simplicity in stack, we just show available capacity
-        fig.add_trace(go.Scatter(
-            x=dunkelflaute.index,
-            y=mitigation_series,
-            mode='lines',
-            name='Strategic Reserve (H2/DSR)',
-            stackgroup='one',
-            line=dict(width=0, color='#9467bd'), # Purple
-            fillcolor='rgba(148, 103, 189, 0.6)'
-        ))
-
-    # 5. The Gap (The Deficit)
-    gap_to_fill = (dunkelflaute['Adjusted_Gap_MW'] / 1000).clip(lower=0)
-
-    fig.add_trace(go.Scatter(
-        x=dunkelflaute.index, 
-        y=gap_to_fill,
-        mode='lines', 
-        name='UNMET GAP (Risk)',
-        stackgroup='one',
-        line=dict(width=0, color='#d62728'), # Red
-        fillcolor='rgba(214, 39, 40, 0.5)' # Semi-transparent Red
-    ))
-
-    # 6. The Demand Line (The Ceiling)
-    fig.add_trace(go.Scatter(
-        x=dunkelflaute.index, 
-        y=dunkelflaute['Demand_2030_MW']/1000,
-        mode='lines', 
-        name='System Demand',
-        line=dict(color='black', width=2, dash='dot')
-    ))
-
-    fig.update_layout(
-        yaxis_title="Power Generation (GW)",
-        height=550,
-        hovermode="x unified",
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        margin=dict(l=0, r=0, t=30, b=0)
-    )
-    st.plotly_chart(fig, use_container_width=True)
-    
-    # Gap warning
-    if peak_gap_fixed > 5:
-        st.error(f"⚠️ **Analysis:** Even with mitigations, a **{peak_gap_fixed:.1f} GW gap** remains. This confirms the critical need for Long Duration Energy Storage (LDES).")
-
 with tab_method:
     st.markdown("### 🧪 Methodology: The 'Digital Twin'")
     st.markdown("""
@@ -297,7 +292,7 @@ with tab_method:
     
     1.  **Weather Pattern:** 2025 demand and settlement data (Elexon) was used to identify the worst 7-day "cold and calm" window.
     2.  **Future Scaling:** **NESO FES 2030** and **CP30 Action Plan** targets were used to scale the wind and solar capacity.
-    3.  **Dispatch Engine:** A custom Python engine (see [codebase](https://github.com/suni639/NESO-flexibility-gap) on GitHub) calculated the net deficit half-hour by half-hour, prioritising:
+    3.  **Dispatch Engine:** A custom Python engine (see codebase link in References) calculated the net deficit half-hour by half-hour, prioritising:
         * `Renewables (Zero Marginal Cost)`
         * `Nuclear (Baseload)`
         * `Battery Storage (Limited Duration)`
@@ -319,3 +314,26 @@ with tab_market:
     * **Problem:** The current market pays for "Generation."
     * **Solution:** REMA aims to create a market for "Availability"—paying assets (like Hydrogen turbines) just to sit there and wait for a Dunkelflaute.
     """)
+
+with tab_refs:
+    st.markdown("### 📚 References & Resources")
+    st.markdown("Sources used to build this stress-test model and define the strategic context:")
+    
+    col_ref1, col_ref2 = st.columns(2)
+    
+    with col_ref1:
+        st.markdown("#### Industry Reports")
+        st.markdown("""
+        * **The Royal Society:** [Large-Scale Energy Storage](https://royalsociety.org/news-resources/projects/low-carbon-energy-programme/large-scale-electricity-storage/)
+        * **NESO (National Energy System Operator):** [Future Energy Scenarios (FES)](https://www.neso.energy/publications/future-energy-scenarios-fes)
+        * **Wood Mackenzie:** [Critical Risks of "Dunkelflaute"](https://www.woodmac.com/press-releases/wood-mackenzie-study-reveals-critical-risks-of-europes-dunkelflaute-renewable-energy-droughts/)
+        * **LCP Delta:** [Security of Supply Analysis](https://www.lcp.com/energy/publications/)
+        """)
+        
+    with col_ref2:
+        st.markdown("#### Project Codebase")
+        st.markdown("""
+        The full simulation engine, dispatch logic, and data loaders are open-source.
+        
+        * 💻 **GitHub Repository:** [suni639/NESO-flexibility-gap](https://github.com/suni639/NESO-flexibility-gap)
+        """)
