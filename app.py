@@ -351,7 +351,7 @@ with tab_refs:
         * **The Royal Society:** [Large-Scale Energy Storage](https://royalsociety.org/news-resources/projects/low-carbon-energy-programme/large-scale-electricity-storage/)
         * **NESO (National Energy System Operator):** [Future Energy Scenarios (FES)](https://www.neso.energy/publications/future-energy-scenarios-fes)
         * **Wood Mackenzie:** [Critical Risks of "Dunkelflaute"](https://www.woodmac.com/press-releases/wood-mackenzie-study-reveals-critical-risks-of-europes-dunkelflaute-renewable-energy-droughts/)
-        * **LCP Delta:** [Security of Supply Analysis](https://www.lcp.com/energy/publications/)
+        * **UK GOV:** [Clean Power 2030 Action Plan](https://www.gov.uk/government/publications/clean-power-2030-action-plan)
         """)
         
     with col_ref2:
