@@ -84,7 +84,7 @@ CP30_TARGETS['Offshore Wind']['High'] = wind_gw
 st.sidebar.subheader("🧪 Mitigation Hierarchy")
 st.sidebar.markdown("Enable tiers from the Strategic Levers tab:")
 
-# CORRELATED CONTROLS: Matches the logic in the Strategic Levers tab
+# CORRELATED CONTROLS
 enable_interconnectors = st.sidebar.checkbox("Tier 1: Interconnectors (15 GW)", value=False)
 enable_dsr = st.sidebar.checkbox("Tier 3: Demand Side Response (10 GW)", value=False)
 enable_reserve = st.sidebar.checkbox("Tier 4: Strategic Reserve (30 GW)", value=False)
@@ -101,7 +101,7 @@ st.sidebar.info("""
 # --- 2. Main Execution Engine (Optimised) ---
 @st.cache_data
 def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
-    # Load Data (Cached so it's fast)
+    # Load Data (Cached)
     weather = load_weather_template()
     peak_2030 = get_fes_peak_demand()
     
@@ -175,7 +175,6 @@ def generate_dispatch_chart(dunkelflaute_df, mitigation_mw):
         ))
 
     # 5. The Gap (The Deficit)
-    # Re-calculate gap locally for the chart
     current_gap = (dunkelflaute_df['Unmet_Gap_MW'] - mitigation_mw).clip(lower=0)
     
     fig.add_trace(go.Scatter(
@@ -254,7 +253,7 @@ st.subheader("🔎 The Dispatch Stack")
 chart_fig = generate_dispatch_chart(dunkelflaute, mitigation_mw)
 st.plotly_chart(chart_fig, use_container_width=True)
 
-# Gap Analysis Message (Kept under chart for context)
+# Gap Analysis Message
 if peak_gap_fixed > 5:
     st.error(f"⚠️ **Analysis:** Even with mitigations, a **{peak_gap_fixed:.1f} GW gap** remains. This confirms the critical need for Long Duration Energy Storage (LDES).")
 
