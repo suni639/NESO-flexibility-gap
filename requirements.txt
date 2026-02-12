@@ -5,3 +5,4 @@ plotly
 openpyxl
 scipy
 matplotlib
+pyarrow
