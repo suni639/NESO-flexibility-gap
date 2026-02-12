@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly.graph_objects as go
+import plotly.graph_objects go
 from src.cp30_targets import CP30_TARGETS
 from src.data_loader import load_weather_template, get_fes_peak_demand, create_2030_profile
 from src.gap_analysis import identify_dunkelflaute_window, run_simple_dispatch
@@ -151,6 +151,7 @@ with col2:
     strategy_card("Clean Surplus", f"{curtailment:,.1f} TWh", "Wasted Energy (Pre-Event)")
 
 with col3:
+    # Logic: Batteries fail after ~24h in this model usually
     strategy_card("Battery Exhaustion", "Day 2", "Of 7-Day Event")
 
 with col4:
@@ -253,7 +254,7 @@ with tab_context:
     col_c1, col_c2 = st.columns([2, 1])
     with col_c1:
         st.markdown("""
-        **The Scenario:** It is a cold, dark January. A high-pressure system sits over the North Sea. Wind output drops to <5% for 7 days. It is freezing, and heat pump demand spikes.
+        **The Scenario:** It's a cold, dark January. A high-pressure system sits over the North Sea. Wind output drops to <5% for 7 days. It's freezing, and heat pump demand spikes.
         
         **The Resilience Gap:**
         The Government's *Clean Power 2030* mission relies heavily on wind. This simulation models a **"Dunkelflaute"** event (German for "dark doldrums"), a prolonged period of low wind and minimal sunshine, severely limiting UK renewable energy production.
@@ -261,7 +262,7 @@ with tab_context:
         During a Dunkelflaute, wind/solar output can drop to near zero, as seen in recent events across Europe where wind provided only 3-4% of demand during peak times.
         
         **Why Batteries Aren't Enough:**
-        Lithium-ion batteries are excellent at covering short durations (1-4 hours), but they cannot support the grid for the prolonged periods (5-7 days) seen in Dunkelflaute events. Once they empty, the grid requires **Firm Power** (Nuclear, Hydrogen, or Carbon Capture) to keep the lights on.
+        Lithium-ion batteries are excellent at covering short durations (1-4 hours), but they cannot support the grid for the prolonged periods (5-7 days) seen in Dunkelflaute events. Once they empty, the grid requires **Firm Power** (Nuclear, Hydrogen, or gas) to keep the lights on.
         """)
         
         st.info("""
@@ -281,7 +282,7 @@ with tab_context:
 with tab_method:
     st.markdown("### 🧪 Methodology: The 'Digital Twin'")
     st.markdown("""
-    We stress-tested the 2030 grid using a "Digital Twin" approach:
+    The 2030 energy demand forecast was stress tested using a "Digital Twin" approach:
     
     1.  **Weather Pattern:** 2025 demand and settlement data (Elexon) was used to identify the worst 7-day "cold and calm" window.
     2.  **Future Scaling:** **NESO FES 2030** and **CP30 Action Plan** targets were used to scale the wind and solar capacity.
@@ -295,17 +296,32 @@ with tab_method:
     st.latex(r"\text{Flexibility Gap} = \text{Peak Demand} - (\text{Firm Gen} + \text{Renewables} + \text{Storage})")
 
 with tab_market:
-    st.markdown("### 🏗️ Closing the Loop: Market Reform")
+    st.markdown("### 🏗️ Strategic Levers & Market Reform")
     st.markdown("""
-    Building hardware is only half the solution. To secure the grid, **Market Reform** is needed to value flexibility correctly.
+    Building hardware is only half the solution. To secure the grid, we require a combination of physical assets and fundamental market reform.
+
+    #### The Mitigation Hierarchy: The 'Dispatch Stack'
+    When renewables and batteries are exhausted during a severe lull, the system operator relies on a specific sequence of interventions:
+
+    | Tier | Mitigation Strategy | Potential Impact | Risk / Limitation |
+    | :--- | :--- | :--- | :--- |
+    | **1** | **Interconnectors** | ~10-15 GW | **High Risk.** We can import power, but only if our neighbours aren't suffering the same weather event. |
+    | **2** | **Nuclear** | ~4-6 GW | **Inflexible.** Provides a stable floor (Baseload) but cannot easily "ramp up" to fill a sudden 50GW gap. |
+    | **3** | **Demand Side Response (DSR)** | ~5-10 GW | **Consumer Action.** Paying heavy industry to shut down and consumers to lower usage. |
+    | **4** | **The Strategic Reserve** | **~30 GW** | **The Gap Filler.** The remaining shortfall must be met by Gas with CCS (Carbon Capture), Hydrogen Turbines, or keeping unabated gas plants on standby as a "last resort" insurance policy. |
+
+    ---
+
+    #### Necessary Market Reforms
+    To secure the grid, **Market Reform** is needed to value flexibility and location correctly.
     
     #### 1. Locational Marginal Pricing (LMP)
     * **Problem:** Currently, the UK has one national price. There is limited incentive to locate batteries where the grid is weakest.
-    * **Solution:** Zonal pricing would create high-price signals in the South and London, encouraging storage assets to be built where demand is highest.
+    * **Solution:** Zonal pricing would create high-price signals in areas of high demand, encouraging storage assets to be built where they are needed most.
     
     #### 2. REMA (Review of Electricity Market Arrangements)
-    * **Problem:** The current market pays for "Generation."
-    * **Solution:** REMA aims to create a market for "Availability"—paying assets (like Hydrogen turbines) just to sit there and wait for a Dunkelflaute.
+    * **Problem:** The current market primarily pays for energy "Generation."
+    * **Solution:** REMA aims to create a market for "Availability"—paying assets (like Hydrogen turbines) just to sit there and wait for a Dunkelflaute event.
     """)
 
 with tab_refs:
