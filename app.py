@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly.graph_objects go
+import plotly.graph_objects as go
 from src.cp30_targets import CP30_TARGETS
 from src.data_loader import load_weather_template, get_fes_peak_demand, create_2030_profile
 from src.gap_analysis import identify_dunkelflaute_window, run_simple_dispatch
