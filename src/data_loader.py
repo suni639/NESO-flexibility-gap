@@ -2,11 +2,14 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
+import streamlit as st
 
+@st.cache_data
 def load_weather_template(filepath="data/raw/demanddata_2025.csv"):
     """
     Loads 2025 historic data to create Unitized Load Factors (0-1) for Wind, Solar, and Demand Shape.
     Returns a clean DataFrame with a DatetimeIndex.
+    Cached to prevent re-loading CSV on every slider change.
     """
     # Load data
     df = pd.read_csv(filepath)
@@ -14,7 +17,8 @@ def load_weather_template(filepath="data/raw/demanddata_2025.csv"):
     # 1. Date Parsing
     # NESO data uses 'SETTLEMENT_DATE' and 'SETTLEMENT_PERIOD' (1-48)
     # Period 1 is 00:00 - 00:30. We align to start time.
-    df['Datetime'] = pd.to_datetime(df['SETTLEMENT_DATE']) + \
+    # dayfirst=True improves parsing speed for UK date formats
+    df['Datetime'] = pd.to_datetime(df['SETTLEMENT_DATE'], dayfirst=True) + \
                      pd.to_timedelta((df['SETTLEMENT_PERIOD'] - 1) * 30, unit='m')
     
     df = df.set_index('Datetime')
@@ -37,9 +41,11 @@ def load_weather_template(filepath="data/raw/demanddata_2025.csv"):
     # Return only the essential columns
     return df[['Demand_MW', 'Wind_LF', 'Solar_LF']]
 
+@st.cache_data
 def get_fes_peak_demand(filepath="data/raw/fes2025_ed1_v006.csv", scenario="Holistic Transition", year="2030"):
     """
     Retrieves the projected Peak Demand (MW) for a specific year and scenario.
+    Cached to prevent re-reading the FES CSV on every interaction.
     """
     df = pd.read_csv(filepath)
     
@@ -70,6 +76,8 @@ def get_fes_peak_demand(filepath="data/raw/fes2025_ed1_v006.csv", scenario="Holi
 def create_2030_profile(weather_df, cp30_targets, peak_demand_2030_mw):
     """
     Scales the 2025 weather template to 2030 dimensions using CP30 Targets.
+    This function is fast (vectorized math) and does not need internal caching 
+    if the inputs are managed by the main app cache.
     """
     df = weather_df.copy()
     
