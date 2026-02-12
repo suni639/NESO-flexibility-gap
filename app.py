@@ -98,7 +98,7 @@ st.sidebar.info("""
 * 🔴 **Top:** Remaining Unmet Gap.
 """)
 
-# --- 2. Main Execution Engine (Optimized) ---
+# --- 2. Main Execution Engine (Optimised) ---
 @st.cache_data
 def load_and_run_simulation(bat_cap, bat_dur, wind_gw_val):
     # Load Data (Cached so it's fast)

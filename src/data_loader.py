@@ -1,4 +1,3 @@
-# Logic to clean FES & Historic data and prepare it for the model
 import pandas as pd
 import numpy as np
 from pathlib import Path
@@ -111,30 +110,3 @@ def create_2030_profile(weather_df, cp30_targets, peak_demand_2030_mw):
     )
     
     return df
-
-# --- Verification Block (Run this file directly to test) ---
-if __name__ == "__main__":
-    try:
-        from cp30_targets import CP30_TARGETS
-        
-        print("1. Loading Weather Template...")
-        weather = load_weather_template()
-        print(f"   Loaded {len(weather)} half-hourly periods.")
-        
-        print("2. Getting FES 2030 Peak...")
-        peak_2030 = get_fes_peak_demand()
-        print(f"   2030 Peak Demand Target: {peak_2030:,.0f} MW")
-        
-        print("3. Creating 2030 Scenario...")
-        scenario_df = create_2030_profile(weather, CP30_TARGETS, peak_2030)
-        
-        print("\n--- 2030 Scenario Snapshot ---")
-        print(scenario_df[['Demand_2030_MW', 'Net_Demand_MW']].describe().round(0))
-        
-        # Quick Dunkelflaute Check
-        max_gap = scenario_df['Net_Demand_MW'].max()
-        print(f"\nSevere Event Detected: Maximum Flexibility Gap = {max_gap:,.0f} MW")
-        
-    except Exception as e:
-        print(f"\n❌ Error: {e}")
-        print("Ensure files are in 'data/raw/' and cp30_targets.py is in 'src/'")
