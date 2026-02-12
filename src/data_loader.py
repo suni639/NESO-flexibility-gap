@@ -15,10 +15,9 @@ def load_weather_template(filepath="data/raw/demanddata_2025.csv"):
     df = pd.read_csv(filepath)
     
     # 1. Date Parsing
-    # NESO data uses 'SETTLEMENT_DATE' and 'SETTLEMENT_PERIOD' (1-48)
-    # Period 1 is 00:00 - 00:30. We align to start time.
-    # dayfirst=True improves parsing speed for UK date formats
-    df['Datetime'] = pd.to_datetime(df['SETTLEMENT_DATE'], dayfirst=True) + \
+    # NESO data uses 'SETTLEMENT_DATE' (YYYY-MM-DD) and 'SETTLEMENT_PERIOD' (1-48)
+    # We specify the format explicitly to prevent parsing errors and improve speed.
+    df['Datetime'] = pd.to_datetime(df['SETTLEMENT_DATE'], format='%Y-%m-%d') + \
                      pd.to_timedelta((df['SETTLEMENT_PERIOD'] - 1) * 30, unit='m')
     
     df = df.set_index('Datetime')
