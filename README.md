@@ -1,5 +1,5 @@
 # UK Clean Power 2030: The Green Energy Gap
-### *Stress-testing the UK grid against a 1-in-10-year wind drought.*
+### *Stress-testing the UK grid against a severe wind and solar drought.*
 
 <br>
 
